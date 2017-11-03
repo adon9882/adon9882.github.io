@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/flexslider/flexslider.css"/>
+  <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/jquery/jquery.mobile.min.js"></script>
+  <script src="js/fastclick/fastclick.js"></script>
+  <script>
+  $(window).load(function(){
+      $(document).on('deviceready',function(){
+        if(device.platform !='undefined'){
+          $("#phoneInfo").text("手機資訊");
+          $("#txt_Model").text(device.name);
+          $("#txtSystem").text(device.platform);
+          $("#txtVersion").text(device.version);
+          $("#txtId").text(device.uuid);
+          $("#txtGap").text(device.phonegap);
+        }else{
+          $("#phoneInfo").text("無法取得版本資訊");
+        }
+      })
+  })
+
+  </script>
+
+  <title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+  <span id="fastclick">
+
+    <div data-role="page" id="phone">
+      <div data-role="header">
+      <a class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" data-rel="back">Back</a>
+      </div>
+      <div data-role="content">
+        <div id="test">
+          <div id="phoneInfo"></div>
+          <div id='txt_Model'></div>
+          <div id='txtSystem'></div>
+          <div id='txtVersion'></div>
+          <div id='txtId'></div>
+          <div id='txtGap'></div>
+        </div><!-- end Test-->
+      </div>
+    </div><!-- end phone-->
+  </span> <!-- end fastclick -->
+</body>
+</html>

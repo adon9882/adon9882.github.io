@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/jgestures/jgestures.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script src="js/sporttery_b_room.js"></script>
+	<script type="text/javascript">
+
+		//在此單元，要控制已截止的比賽，讓場次禁止選取，只要在 spotf_bdn 加入 sportf_down即可
+		
+		/*預設選取項目
+			sportf_games(i);
+			sporttery_b_room.html 胜负
+			sporttery_b_room1.html 让分胜负
+			sporttery_b_room2.html 胜分差
+			sporttery_b_room3.html 大小分
+			sporttery_b_room4.html 混合过关
+		*/
+		$(function(){
+			sportf_games(4);
+		})
+	</script>
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="sporttery_b_room4" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 0</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role="content" class="ui-content" role="main">
+			<div class="astro_subject ">
+				<a onclick="$.fn.BHome(&quot;index.html&quot;,0);" class="astro_back A_btn ui-link"><img src="images/a01/00-02.png"></a>
+				<span class="title">
+					<span class="ef_list_h1">
+						篮球竟彩-
+					</span>
+					<span data-role="none" class="ef_list_btn">
+						<div class="ef_list_arrow"></div>
+						<span class="sportf_titles">混合过关</span>
+						
+						<div class="sportf_lightbox">
+							<table class="sportf_lightbox_tbs" style="display: none;">
+								<tbody><tr>
+									<td onclick="window.open('sporttery_b_room.html','_self')" class="sportf_tds">胜负</td>
+									<td onclick="window.open('sporttery_b_room1.html','_self')" class="sportf_tds">让分胜负</td>
+									<td onclick="window.open('sporttery_b_room2.html','_self')" class="sportf_tds">胜分差</td>
+								</tr>
+								<tr>
+									<td onclick="window.open('sporttery_b_room3.html','_self')" class="sportf_tds">大小分</td>
+									<td onclick="window.open('sporttery_b_room4.html','_self')" class="sportf_tds on">混合过关</td>
+								</tr>
+							</tbody></table>
+						</div>
+					</span><!--/ef_list_btn-->
+				</span>
+				<a class="sportf_backR1 ui-link">
+					<img src="images/b09/03.png">
+				</a>
+				
+				<a class="astro_backR1 sportf_backR2 A_btn ui-link" href="#sporttery_b_question" data-transition="fade" data-rel="external">
+					<img src="images/b09/04.png">
+				</a>
+				<input type="hidden" class="uh">
+			</div>
+
+						<div class="nivdr_subti sportf_pointer">
+				<div class="sportf_chk">
+					2014年5月13日 星期二 8场可投
+					<span class="sportf_arw"></span>
+				</div>
+			</div><!--/lro_subti-->
+			<div class="sportf_list ">
+<!--/Game------------------------------------------------------------------>
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+				<!--/Game------------------------------------------------------------------>
+
+
+
+				
+			</div><!--/sportf_list-->
+						<div class="nivdr_subti sportf_pointer">
+				<div class="sportf_chk">
+					2014年5月13日 星期二 8场可投
+					<span class="sportf_arw"></span>
+				</div>
+			</div><!--/lro_subti-->
+			<div class="sportf_list ">
+<!--/Game------------------------------------------------------------------>
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+				<!--/Game------------------------------------------------------------------>
+
+
+
+				
+			</div><!--/sportf_list-->
+						<div class="nivdr_subti sportf_pointer">
+				<div class="sportf_chk">
+					2014年5月13日 星期二 8场可投
+					<span class="sportf_arw"></span>
+				</div>
+			</div><!--/lro_subti-->
+			<div class="sportf_list ">
+<!--/Game------------------------------------------------------------------>
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								WNBA<br>
+								001<br>
+								18:27截止<br>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--混合过关-->
+								<span class="sportf_game">
+									<span class="sportf_bd1">雷霆</span>
+									<span class="sportf_bd1">VS</span>
+									<span class="sportf_bd1 ">马刺 <span class="green01">(-5.5)</span></span>
+									<!--紀錄"展開全部"投注頁面選取的項目-->
+									<input type="hidden" value="" class="sportf_mmn1">
+									<input type="hidden" value="" class="sportf_mmn2">
+									<input type="hidden" value="" class="sportf_mmn3">
+									<!--/紀錄"展開全部"投注頁面選取的項目-->
+									<!--展開投注頁面 四項目中，各欄百分比-->
+									<input type="hidden" class="sportf_mmn_refnum1" value="2.50,3.25,2.45,4.50">
+									<input type="hidden" class="sportf_mmn_refnum2" value="2.53,3.25,2.45,4.50,3.85,1.96,2.52,3.25,2.45,4.50,3.85,1.93">
+									<input type="hidden" class="sportf_mmn_refnum3" value="2.42,3.25">
+
+									<table class="sport_tbs">
+										<tbody><tr>
+											<td class="sport_caption1">非<br>让<br>球</td>
+											<!--加入 sportf_down 即可關閉該選項-->
+											<td class="sportf_bdn sportf_bd4  sportf_down">
+												主负
+												<span class="blue04">2.45</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4 sportf_down">
+												主胜
+												<span class="blue04">2.45</span>
+											</td>
+											<td rowspan="2" class="sportf_showall sportf_bd4"><a style="width:100%; display: inline-block;" href="#sporttery_b_room4_detail" class="sportf_detail_lightbox ui-link" data-transition="fade" data-rel="external">展开<br>全部</a></td>
+										</tr>
+										<tr>
+											<td class="sport_caption2">让<br>球<br>　</td>
+											<td class="sportf_bdn sportf_bd4">
+												主负
+												<span class="blue04">4.50</span>
+											</td>
+											<td class="sportf_bdn sportf_bd4">
+												主胜
+												<span class="blue04">1.55</span>
+											</td>
+										</tr>
+									</tbody></table>
+									<br>
+								</span>
+								<!--/混合过关-->
+
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+				<!--/Game------------------------------------------------------------------>
+
+
+
+				
+			</div><!--/sportf_list-->
+						<div class="sportf_btmspace"></div><!--/sportf_btmspace-->
+		</div><!--/content -->
+		<div data-role='footer' class="lor_footer"  style="background:#e1e1e1;position: fixed;bottom: 0em;" >
+			<div class="lorl_ezto">
+				<span class="lor_recycle"></span>
+					已选<span class='sporttery_f_totalNum'>0</span>场
+				<a  href="sporttery_b_room_list4.html" data-role='none' data-ajax="false"  data-rel="external" data-role='none' >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+
+
+	</div><!--/sporttery_b_room-->
+
+	<div data-role='page' id="sporttery_b_room4_detail" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+		<div style="background:#ddd;width:100%; display:inline-block;position: fixed;top: 0em;" >
+			<div class="sphistory_top_main">
+	
+				<div class="sphistory_mainboard">
+					<span class="sphistory_bordcont">
+						雷霆
+					</span>
+					<span class="sphistory_bordcont">
+						VS
+					</span>
+					<span class="sphistory_bordcont">
+						马刺
+					</span>
+				</div><!--/sphistory_mainboard-->
+			</div><!--/sphistory_top_main-->
+		</div><!-- /header-->
+
+		<div data-role='content' id="sporttery_b_room4_detail_content" >
+			<div class="sportf_detail_content">
+
+				<table class="sport_tbs sprotf_detail_1">
+					<tr>
+						<td class="sport_caption1">非<br>让<br>分</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							主负
+							<span class="blue04 sportf_detail_refnumb">2.45</span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							主胜
+							<span class="blue04 sportf_detail_refnumb">2.45</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="sport_caption2">让<br>分<br>　</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							让分主负
+							<span class="blue04 sportf_detail_refnumb">4.50</span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							让分主胜
+							<span class="blue04 sportf_detail_refnumb">1.55</span>
+						</td>
+					</tr>
+				</table>
+			</div><!--/sportf_detail_content-->
+
+			<div class="sportf_detail_content">
+				<p>主队让分 <span class="green01">-10.5</span></p>
+				<table class="sport_tbs sprotf_detail_2">
+					<tr>
+						<td class="sport_caption_2" rowspan='2'>客胜</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							1-5
+							<span class="blue04 sportf_detail_refnumb"></span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							6-10
+							<span class="blue04 sportf_detail_refnumb"></span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							11-15
+							<span class="blue04 sportf_detail_refnumb"></span>
+						</td>
+					</tr>
+					<tr>
+						
+						<td class="sportf_bdn sportf_bd4_2_2">
+							16-20
+							<span class="blue04 sportf_detail_refnumb"></span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							21-25
+							<span class="blue04 sportf_detail_refnumb"></span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							26+
+							<span class="blue04 sportf_detail_refnumb">2.45</span>
+						</td>
+						
+					</tr>
+					<tr>
+						<td class="sport_caption_3" rowspan='2'>主胜</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							1-5
+							<span class="blue04 sportf_detail_refnumb">2.45</span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							6-10
+							<span class="blue04 sportf_detail_refnumb">3.25</span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							11-15
+							<span class="blue04 sportf_detail_refnumb">2.45</span>
+						</td>
+					</tr>
+					<tr>
+
+						<td class="sportf_bdn sportf_bd4_2_2">
+							16-20
+							<span class="blue04 sportf_detail_refnumb">2.45</span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							21-25
+							<span class="blue04 sportf_detail_refnumb">3.25</span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							26+
+							<span class="blue04 sportf_detail_refnumb">2.45</span>
+						</td>
+					</tr>
+				</table>
+			</div><!--/sportf_detail_content-->
+
+			<div class="sportf_detail_content"><p></p>
+				<table class="sport_tbs sprotf_detail_3">
+					<tr>
+						<td class="sport_caption_2" rowspan='2'>大小分</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							大分
+							<span class="blue04 sportf_detail_refnumb"></span>
+						</td>
+						<td class="sportf_bdn sportf_bd4_2_2">
+							小分
+							<span class="blue04 sportf_detail_refnumb"></span>
+						</td>
+					</tr>
+				</table>
+			</div><!--/sportf_detail_content-->
+		</div><!--/content -->
+		<div data-role='footer' class="lor_footer"  style="background:#e1e1e1;position: fixed;bottom: 0em;" >
+			<div class="lorl_ezto">
+					<table class="sporttery_f_lc4_2">
+						<tr>
+							<td onclick='history.go(-1)'>取消</td>
+							<td class="sportf_detail_checkbtn">確定</td>
+						</tr>
+					</table>
+			</div>
+		</div><!--/footer-->
+	</div>
+	<!--/sporttery_b_room4_detail===================================-->
+	<!--/History Page------------------------------------------------------------------>
+
+	
+	<!--sporttery_b_question===================================-->
+	<div data-role='page' id="sporttery_b_question" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+		<div data-role='content' id="sporttery_f_history_content">
+			<div class="astro_subject ">
+				<a onclick='history.go(-1)' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">
+					<span class="ef_list_h1">
+						竟彩篮球玩法说明 
+					</span>
+				</span>
+			</div>
+			<div class="sporttery_bq_content">
+				<b>截止时间 :</b>
+				<span>
+					赛前或官网截止前2分58秒。
+				</span> 
+			</div>
+
+		</div><!--/content -->
+	</div>
+	<!--/sporttery_f_question===================================-->
+	<!--/History Page------------------------------------------------------------------>
+
+	<!--sporttery_b_filter===================================-->
+				<!--===========Lightbox==================-->
+			<div class="sporttery_f_select_filter">
+				<div class="sporttery_f_lc">
+					<table class="sporttery_f_lc1">
+						<tr>
+							<td>赛事选择</td>
+						</tr>
+					</table>
+					<table class="sporttery_f_lc3_2 cont1 sporttery_f_contents">
+						<tr>
+							<td class="sportf_ev2">
+								<span>全选</span>
+							</td>
+							<td class="sportf_ev2">
+								<span>反选</span>
+							</td>
+						</tr>
+					</table>
+					<table class="sporttery_f_lc3_2 cont2 sporttery_f_contents">
+						<tr>
+							<td class="sportf_ev2">
+								<span class="sportf_data">WNBA</span>
+							</td>
+							<td class="sportf_ev2">
+								<span class="sportf_data">NBA</span>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+
+					<table class="sporttery_f_lc4_3 cont3">
+						<tr>
+							<td>取消</td>
+							<td>確定</td>
+						</tr>
+					</table>
+				</div>
+			</div><!--/sporttery_f_select_filter-->
+			<!--/===========Lightbox==================-->
+	</span> <!-- end fastclick -->
+</body>
+</html>

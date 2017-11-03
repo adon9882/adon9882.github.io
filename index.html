@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=drvice-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.datepicker.css" />
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/flexslider/flexslider.css"/>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/jgestures/jgestures.min.js"></script>
+	<script src="js/jquery/jquery.ui.datepicker.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/flexslider/jquery.flexslider.js"></script>
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="home" >
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 0</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role='content'>
+
+			<div class="flexslider">
+			  <ul class="slides">
+			    <li>
+			      <img src="images/slider/slider1.jpg" />
+			    </li>
+			    <li>
+			      <img src="images/slider/slider2.jpg" />
+			    </li>
+			    <li>
+			      <img src="images/slider/slider3.jpg" />
+			    </li>
+			  </ul>
+			</div><!--/flexslider-->
+
+			<div class="astro_nav">
+				<script src="js/loading.js"></script>
+				<ul>
+					<li><a class="A_btn" href="news.html" data-transition="slide"><img src="images/nav/01.png"/></a></li>
+					<li><a class="A_btn astro_phoneinfo"  href="login.html" data-transition="slide"><img src="images/nav/02.png"/></a></li>
+					<li><a class="A_btn" href="award_room.html" data-transition="slide"><img src="images/nav/03.png"/></a></li>
+					<li><a class="A_btn" href="ez_room.html" data-transition="slide"><img src="images/nav/04.png"/></a></li>
+					<li><a class="A_btn" href="draw_room.html" data-transition="slide"><img src="images/nav/05.png"/></a></li>
+					<li><a class="A_btn" href="cal_room.html" data-transition="slide" data-rel="external"  data-ajax="false"><img src="images/nav/06.png"/></a></li>
+					<li><a class="A_btn" href="service_room.html" data-transition="slide" data-rel="external"  data-ajax="false"><img src="images/nav/00.png"/></a></li>
+				</ul>
+			</div><!--/ astro_nav-->
+
+
+			<div class="astro_title1">彩票投注</div><!--astro_title-->
+			<div class="astro_news_lister">
+				
+				<a class="cotb" href="lottery_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/07.png"/>
+					</span>
+					<span class="cont2">
+						“超级大乐透”的主玩法为“35选5加12选2”，此外包括超级小盘“12选2生肖乐”。“超级大乐透”开奖时间为每周一、三、六，在浙江的销售截止时间为当期停售日20：00。
+					</span>
+				</a>
+				<a class="cotb" href="6plus1_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/08.png"/>
+					</span>
+					<span class="cont2">
+						“体彩6+1”的主玩法为从1~6位及特别号中至少选一个号码，并提供玩家目前选号所产生的投注数及总金额。
+					</span>
+				</a>
+				<a class="cotb" href="3plus1_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/09.png"/>
+					</span>
+					<span class="cont2">
+						“排列3”的主玩法为1~3位中數字0-9至少選一個號碼，內有“普通投注”、 “參與合購”、 “玩法說明”選項提供玩家選擇。
+					</span>
+				</a>
+				<a class="cotb" href="5plus1_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/10.png"/>
+					</span>
+					<span class="cont2">
+						“排列5”的主玩法为1~5位中數字0-9至少選一個號碼，內有“普通投注”、 “參與合購”、 “玩法說明”選項提供玩家選擇。
+					</span>
+				</a>
+				<a class="cotb" href="20in5_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/11.png"/>
+					</span>
+					<span class="cont2">
+						“20选5”可随机选取5~18个前区号码，并提供玩家直接前区选号及目前选号所产生的投注数及总金额。
+					</span>
+				</a>
+				<a class="cotb" href="11in5_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/12.png"/>
+					</span>
+					<span class="cont2">
+						“11选5”可随机选取5~18个前区号码，并提供玩家直接前区选号及目前选号所产生的投注数及总金额。
+					</span>
+				</a>
+				<a class="cotb" href="lottery_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/13.png"/>
+					</span>
+					<span class="cont2">
+						CONING SOON...
+					</span>
+				</a>
+				<a class="cotb into_vd_room call_lightbox">
+					<span class="cont1">
+						<img src="images/lottery/14.png"/>
+					</span>
+					<span class="cont2">
+						“胜负彩”是以中国足球彩票胜负玩法所选择的足球比赛场次为竞猜对象，购买“胜负场”
+					</span>
+				</a>
+				<a class="cotb" href="sporttery_f_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/15.png"/>
+					</span>
+					<span class="cont2">
+						足球竞彩为您提供竞彩足球胜平负过关投注、玩法、开奖、推荐、预测等服务，并提供最新的竞彩足球比分直播、推荐、预测、规则等资讯
+					</span>
+				</a>
+				<a class="cotb" href="sporttery_b_room.html" data-rel="external"  data-ajax="false"
+ data-transition="slide" >
+					<span class="cont1">
+						<img src="images/lottery/16.png"/>
+					</span>
+					<span class="cont2">
+						篮球竞彩为您提供竞彩篮球胜负过关投注、玩法、开奖、推荐、预测等服务，并提供最新的竞彩篮球比分直播、推荐、预测、规则等资讯
+					</span>
+				</a>
+			</div><!--/astro_news_lister-->
+
+			<div class="astro_title1">红利积分游戏</div><!--astro_title-->
+
+			<div class="astro_nav">
+				<ul>
+					<li><img src="images/game/17.png"/></li>
+					<li><img src="images/game/18.png"/></li>
+					<li><img src="images/game/19.png"/></li>
+					<li><img src="images/game/20.png"/></li>
+					<li><img src="images/game/21.png"/></li>
+				</ul>
+			</div><!--/ astro_nav-->
+
+
+			<div class="lightbox_vd">
+				<table class="vd_content">
+					<tr class="vd_li cotb" onclick="window.open('9vd_room.html','_self');">
+						<td class="vd_ti_l">
+							<img class="vd_im" src="images/b10/a02.png" >
+						</td>
+						<td class="vd_ti cotb">任选九场投注</td>
+					</tr>
+					<tr class="vd_li cotb" onclick="window.open('14vd_room.html','_self');">
+						<td class="vd_ti_l">
+							<img class="vd_im" src="images/b10/a03.png" >
+						</td>
+						<td class="vd_ti">胜负14场</td>
+					</tr>
+					<tr class="vd_li cotb" onclick="window.open('6vd_room.html','_self');">
+						<td class="vd_ti_l">
+							<img class="vd_im" src="images/b10/a04.png" >
+						</td>
+						<td class="vd_ti">6场半全场</td>
+					</tr>
+					<tr class="vd_li cotb" onclick="window.open('4vd_room.html','_self');">
+						<td class="vd_ti_l">
+							<img class="vd_im" src="images/b10/a05.png" >
+						</td>
+						<td class="vd_ti">4场进球</td>
+					</tr>
+				</table>
+			</div><!--/lightbox_vd-->
+		</div><!--/content -->
+		
+	</div><!--/home-->
+	</span> <!-- end fastclick -->
+</body>
+</html>

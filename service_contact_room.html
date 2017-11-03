@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/jgestures/jgestures.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script src="js/script.js"></script>
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="service_contact_room" >
+			<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+				<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+			</div><!-- /panel -->
+
+			<div data-role='header'>
+				<div class='ui-grid-b astro_head'>
+					<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+					<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+					<div class='ui-block-c '>
+						<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+							<img src="images/a01/00-01.png" />
+						</a>
+					</div>
+				</div>
+			</div><!-- /header-->
+
+			<div data-role='content'>
+				<div class="astro_subject">
+					<a data-rel="back" class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+					<span class="title">意见回馈</span>
+					
+				</div>
+				
+				<div class='scr_main'>
+					<div class='scr_main_list'>
+						<span class='scr_main_left'>問題分類</span>
+						<span class='scr_main_right'>
+							<select class="scr_main_right_sel">
+								<option>请选择（共11类）</option>
+								<option>登录问题</option>
+								<option>注册问题</option>
+								<option>安装问题</option>
+								<option>投注选号</option>
+								<option>机选投注</option>
+								<option>合购跟单</option>
+								<option>充值问题</option>
+								<option>提现问题</option>
+								<option>查询问题</option>
+								<option>资料修改</option>
+								<option>其他问题</option>
+							</select>
+						</span>
+					</div>
+					<div class='scr_main_list'>
+						<span class='scr_main_left'>輸入反饋</span>
+						<span class='scr_main_right'>
+							<textarea rows="5" ></textarea>
+						</span>
+					</div>
+				</div><!--/src_main-->
+
+				<div>
+					<span class="drrdl_rebit">提　交</span>
+				</div>
+
+				<div class='scr_main'>
+					<div class="scr_main_list">
+						<span class="scr_main_center">
+							我們會及時解決您提交的回饋，感謝您
+						</span>
+						<span class="scr_main_center">
+							對浙江體育彩票的使用和支持
+						</span>
+						<span class="scr_main_bottom">
+							客服電話: <span>000-0000-000
+						</span>
+					</div>
+				</div><!--/src_main-->
+
+			</div><!--/content -->
+			<div class="drrdl_rebitbox">
+			</div>
+	</div><!--/service_contact_room-->
+	</span> <!-- end fastclick -->
+</body>
+</html>

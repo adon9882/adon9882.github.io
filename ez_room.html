@@ -1,0 +1,127 @@
+	<div data-role='page' id="draw" >
+		<script src="js/ez_room.js" ></script>
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+		<div data-role='content'>
+			<div class="astro_subject">
+				<a data-rel="back" class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">
+					合购大厅
+				</span>
+			</div>
+			<select class="ez_sel" data-role="none" class="draw_select">
+				<option value="0">全部</option>
+			</select>
+			<table class="draw_sect ">
+				<tr>
+					<td class="draw_switch draw_bl draw_switch_hover" >按进度排序</td>
+					<td class="draw_switch draw_bl" >按人气排序</td>
+					<td class="draw_switch draw_bl" >按金额排序</td>
+				<tr>
+			</table>
+
+			<div class="ez_search_box">
+				<input type="text" id="ez_search" name="ez_search" class="ez_search" placeholder="輸入用戶名"/>
+			</div>
+			<div >
+				<ul data-role='listview' data-inset="true">
+					<li class="draw_chk draw_chk1 draw_sel draw_sel1 ez_list">
+						<a href="ez_room_list.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								<span class="ez_num">57</span>%
+								<p><div class="ez_line1" style="gray01"><div class="ez_line2" style="red01"></div></div></p>
+								<p class="ez_acount">剩余<span class="red01">5122</span>份</p>
+							</span>
+							<span class="draw_a draw_o2 ez_o2 ez_a ez_p">
+								<p>發起人:&nbsp;<span class="blue01">秒算生獎</span></p>
+								<p>戰績:&nbsp;<span class="blue01">15353</span></p>
+								<p>總額:&nbsp;<span class="red01"> 12000元</span></p>
+							</span>
+							<span class="draw_a draw_o3 draw_green ez_o3">北單勝平負</span>
+						</a>
+					</li><!--/li-->
+					<li class="draw_chk draw_chk1 draw_sel draw_sel1 ez_list">
+						<a href="ez_room_list.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								<span class="ez_num">64</span>%
+								<p><div class="ez_line1" style="gray01"><div class="ez_line2" style="red01"></div></div></p>
+								<p>剩余<span class="red01">8983</span>份</p>
+							</span>
+							<span class="draw_a draw_o2 ez_o2 ez_a ez_p">
+								<p>發起人:&nbsp;<span class="blue01">任盈盈 令狐沖</span></p>
+								<p>戰績:&nbsp;<span class="blue01">15353</span></p>
+								<p>總額:&nbsp;<span class="red01"> 25000元</span></p>
+							</span>
+							<span class="draw_a draw_o3 draw_green ez_o3">勝平負/球勝平負</span>
+						</a>
+					</li><!--/li-->
+					<li class="draw_chk draw_chk1 draw_sel draw_sel1 ez_list">
+						<a href="ez_room_list.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								<span class="ez_num">37</span>%
+								<p><div class="ez_line1" style="gray01"><div class="ez_line2" style="red01"></div></div></p>
+								<p>剩余<span class="red01">9387</span>份</p>
+							</span>
+							<span class="draw_a draw_o2 ez_o2 ez_a ez_p">
+								<p>發起人:&nbsp;<span class="blue01">北單高手</span></p>
+								<p>戰績:&nbsp;<span class="blue01">15000</span></p>
+								<p>總額:&nbsp;<span class="red01"> 12000元</span></p>
+							</span>
+							<span class="draw_a draw_o3 draw_green ez_o3">北單勝平負</span>
+						</a>
+					</li><!--/li-->
+					<li class="draw_chk draw_chk1 draw_sel draw_sel1 ez_list">
+						<a href="ez_room_list.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								<span class="ez_num">69</span>%
+								<p><div class="ez_line1" style="gray01"><div class="ez_line2" style="red01"></div></div></p>
+								<p>剩余<span class="red01">921</span>份</p>
+							</span>
+							<span class="draw_a draw_o2 ez_o2 ez_a ez_p">
+								<p>發起人:&nbsp;<span class="blue01">濱哥</span></p>
+								<p>戰績:&nbsp;<span class="blue01">15353</span></p>
+								<p>總額:&nbsp;<span class="red01"> 3000元</span></p>
+							</span>
+							<span class="draw_a draw_o3 draw_green ez_o3">勝平負/球勝平負</span>
+						</a>
+					</li><!--/li-->
+					<li class="draw_chk draw_chk1 draw_sel draw_sel1 ez_list">
+						<a href="ez_room_list.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								<span class="ez_num">77</span>%
+								<p><div class="ez_line1" style="gray01"><div class="ez_line2" style="red01"></div></div></p>
+								<p>剩余<span class="red01">921</span>份</p>
+							</span>
+							<span class="draw_a draw_o2 ez_o2 ez_a ez_p">
+								<p>發起人:&nbsp;<span class="blue01">濱哥</span></p>
+								<p>戰績:&nbsp;<span class="blue01">15000</span></p>
+								<p>總額:&nbsp;<span class="red01"> 3000元</span></p>
+							</span>
+							<span class="draw_a draw_o3 draw_green ez_o3">勝平負/球勝平負</span>
+						</a>
+					</li><!--/li-->
+				</ul>
+			</div><!--/ astro_news_list-->
+
+
+		</div><!--/content -->
+		<div data-role='footer' class="astro_footer" id='main' style="text-align:center;display:none;">
+			<p>版权所有: 浙江省体育彩票管理中心</p>
+			<p>域名: 浙江体育彩票网 <a href="http://www.zjlottery.com" >www.zzjlottery.com</a></p>
+			<p>浙ICP备11013169号</p>
+		</div><!--/footer-->
+		
+	</div><!--/draw-->

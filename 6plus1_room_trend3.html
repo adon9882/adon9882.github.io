@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/drawing/jquery.drawing.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script type="text/javascript" src="js/lottery_room.js"></script>
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="6plus1_room_trend" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+		<style>
+		</style>
+		<div class="lort_content1">
+			<div class="astro_subject">
+				<a onclick='$.fn.BHome("","back");' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">大乐透-走势图</span>
+			</div><!--/astro_subject-->
+<!------------------------------------------------------------------>
+	<table class="draw_sect lort_menuSel">
+		<tr>
+			<td class="lort_tms draw_switch draw_bl draw_switch_hover" >前区走势</td>
+			<td class="lort_tms draw_switch draw_bl" >后区走势</td>
+			<td class="lort_tms draw_switch draw_bl" onclick="window.open('6plus1_room_trend2.html','_self');">投注倾向</td>
+		<tr>
+	</table>
+	<!--上-->
+	<div class="touch_trend_boxs">
+		<div class="clearbox ">
+			<span class='lorl_trend_ord' data-role='none'>
+				期号<span class="arrnont arrow_up_" data-role='none'></span>
+			</span>
+		</div>
+		<div class="touch_move_col">
+				<table class='mainMindCo TableCollapse oneHundred'>
+					<?php 
+					echo "<tr>";
+						for($i=0;$i<=9;$i++){
+							echo "
+								<td class='co_bgs trend_bd_red lort_cx'>
+									".$i."
+								</td>";
+						}
+						
+					echo "</tr>";
+					?>
+				</table>
+		</div>
+		<!--中-->
+		<div class='touch_move_row'>
+			<div class="touch_row">
+				<table class='mainMindR TableCollapse' width="100%">
+					<?php 
+					for ($r=14013;$r<=14024;$r++){
+						echo "<tr>";
+							echo "
+								<td class='lort_cz trend_bd_red trend_bd_blue'>
+									".$r."
+								</td>";
+						echo "</tr>";
+					}
+					?>
+				</table>
+			</div>
+		</div>
+		<div class='touch_move'>
+			<div class='pep'>
+				<table class='mainContent TableCollapse oneHundred'>
+					<?php 
+					for ($r=1;$r<=12;$r++){
+						echo "<tr>";
+						for($i=0;$i<=9;$i++){
+							echo "
+							<td class='lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red'>
+								".$i."
+							</td>";
+						}
+						echo "</tr>";
+					}
+					?>
+				</table>
+			</div>
+		</div>
+		<!--下-->
+		<div class="clearbox red05">
+			<span class='lorl_trend_ord' data-role='none'>
+				选号
+			</span>
+		</div>
+		<div class="touch_move_col_ball red05">
+				<table class='mainMindCo TableCollapse mainMinSelect oneHundred'>
+					<?php 
+					echo "<tr>";
+						for($i=0;$i<=9;$i++){
+							echo "
+							<td class='lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2'>
+								".$i."
+							</td>";
+						}
+						
+					echo "</tr>";
+					?>
+				</table>
+		</div>
+	</div>
+<!------------------------------------------------------------------>	
+		</div><!--/content -->
+
+
+
+
+		<div data-role='footer' class="lor_footer2" style="background:#e1e1e1;" >
+			<div class="lorl_ezto2">
+				<span class="lorltr_lost red01">遺漏</span>
+				共18注 - 36元
+				<a  href="6plus1_room_list.html" data-role='none' data-ajax="false"  data-rel="external" data-role='none' >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+	</div><!--/6plus1_room_trend-->
+	</span> <!-- end fastclick -->
+</body>
+</html>
+<script>
+$(window).load(function(){
+		//Ajust Touch Table Width
+		var ohtd = $(".oneHundred tr").eq(0).find('td').length*1.9;
+		$(".oneHundred").outerWidth(ohtd+'em');
+	setTimeout(function(){
+		//Ajust Touch Table Height 
+		var a = $(".astro_head").outerHeight();
+		var b = $(".astro_subject").outerHeight();
+		var c = $(".lorl_ezto").outerHeight();
+		var d = $(".clearbox").outerHeight();
+		var f = $(".draw_sect").outerHeight();
+		var w =$(window).outerHeight();
+
+		var e = w-a-b-c-d-d-d-f;
+		$(".touch_move").outerHeight(e);
+		$(".touch_move_row").outerHeight(e);
+		
+	},200);
+	//odd
+	$(".mainContent tr:odd").addClass('odd');
+	$(".mainMindR tr:odd").addClass('odd');
+})
+</script>
+<script>
+
+$(function(){
+	$(".mainContent").css({position:'absolute'});
+	var mqo = {x:0, x2:0, xo: 0 , xf: 0 , y:0, y2:0, yo:0, yf:0};
+	var tg={co1:'.mainMindR',co2:'.mainMindCo'};
+	var tofs = $(".mainContent").position();
+	mqo.xf = tofs.left;
+	mqo.yf = tofs.top;
+	
+	$(".touch_move .pep").on("touchstart",
+	 function(e){
+	 	   event.preventDefault();
+	 	  //取得方塊座標
+	 	  	var tofs = $(".mainContent").position();
+			mqo.xf = tofs.left;
+			mqo.yf = tofs.top;
+		  //取得Touch座標
+			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+			mqo.x = touch.pageX;
+			mqo.y = touch.pageY;
+	}).on("touchmove",
+	 function(e){
+
+	 	  //計算方塊移動量
+		  var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+		  mqo.x2 = mqo.xf + touch.pageX - mqo.x;
+		  mqo.y2 = mqo.yf + touch.pageY - mqo.y;
+		  $(".mainContent").css({left: mqo.x2, top:mqo.y2});
+		  PreventSoFar(".mainContent");
+		 
+		  
+	}).on("touchend",
+	 function(e){
+	 	  PreventSoFar(".mainContent");
+		  var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+	});
+	//Prevent Far Treatment
+	function PreventSoFar(t){
+		var x = $(t).stop().position().left;
+		var y = $(t).stop().position().top;
+		var all_w = $(t).outerWidth() - $(t).parent().parent().outerWidth();
+		var all_h = $(t).outerHeight() - $(t).parent().parent().outerHeight();
+		$(tg.co1).stop().css({top: y});
+		$(tg.co2).stop().css({left: x});
+		if ( -x > all_w ){ 
+			$(t).css({ left: -all_w });   
+			$(tg.co1).stop().css({top: y});  
+			$(tg.co2).stop().css({left: -all_w});
+		}
+		if ( x > 0 ){ 
+			$(t).css({ left: 0 });
+	       $(tg.co1).stop().css({top: y});
+	       $(tg.co2).stop().css({left: 0});
+		}
+
+		if ( -y > (all_h) ){
+	    	$(t).css({ top: -all_h });
+			$(tg.co1).stop().css({top: -all_h});
+			$(tg.co2).stop().css({left: x});
+		}
+		if ( y > 0 ){ 
+	        $(t).css({ top: 0 });
+			$(tg.co1).stop().css({top: 0});
+			$(tg.co2).stop().css({left: x});
+		}
+	}
+
+	// Pad Treatment
+	var strPad = function(g,a,b){
+		for(var d = 0 ;
+		 d< g.length;
+		 d++){
+			g[d] = ( a + g[d] ).substr( -b );
+		}
+		return g;
+	}
+
+	//Select Ball
+	$.fn.lortSelectBall = function(tg,r1,r2){
+		var main = $(this);
+		main.find("."+tg).each(function(i){
+			$(this).click(function(){
+				if($(this).hasClass(r1)){
+					$(this).removeClass(r1).addClass(r2);
+				}else{
+					$(this).removeClass(r2).addClass(r1);
+				}
+			})
+		})
+	}
+	$(".mainMinSelect").lortSelectBall("lort_rrr",'lort_cz_red','lort_cz_red2');
+	$(".mainMinSelect").lortSelectBall("lort_bbb",'lort_cz_blue','lort_cz_blue2');
+
+	//Change Arrow Direction
+	$(".lorl_trend_ord").on('click',function(){
+		var aj = $(this).find(".arrnont").hasClass("arrow_up_");
+		if(aj){
+			$(this).find(".arrnont").removeClass("arrow_up_").addClass("arrow_down_");
+		}else{
+			$(this).find(".arrnont").removeClass("arrow_down_").addClass("arrow_up_");
+		}
+	})
+
+
+})
+
+
+//走勢篩選按鈕
+$(window).load(function(){
+
+	//Hash URl GET Value
+	$.fn.getUrlVars = function (){
+	  var vars = [], hash;
+	  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	  for(var i = 0; i < hashes.length; i++)
+	  {
+	      hash = hashes[i].split('=');
+	      vars.push(hash[0]);
+	      vars[hash[0]] = hash[1];
+	  }
+	  return vars;
+	}
+
+	//Menu Select Ajust
+	$.fn.trendMenuSel = function(tg){
+		var bp = $(this);
+		 function DropAj(bx,i){
+			$("."+bx.r).css({top: 0});  
+			if(i==1){
+				$("."+bx.rt1).css({left:0,top:0});
+				$("."+bx.t).css({left: 0});
+			}else if(i==2){
+				var ofs = $("."+bx.rt2).eq(0).position();
+				$("."+bx.rt1).css({left:-ofs.left,top:0});
+				$("."+bx.t).css({left: -ofs.left});
+			}
+		}
+		
+		bp.find("."+tg.tm).each(function(i){
+			$(this).on('click',function(){
+				$("."+tg.tm).removeClass(tg.th);
+				$(this).addClass(tg.th);
+				DropAj(tg.box,i+1);
+			})
+		});
+
+
+		/*Go To Blue Ball site -  if isset $_GET['b']=2*/
+		var myurl = $.fn.getUrlVars();
+		var b_get = myurl['b'];
+		if(b_get=='2'){
+			$("."+tg.tm).removeClass(tg.th);
+			bp.find("."+tg.tm).eq(1).addClass(tg.th);
+			DropAj(tg.box,2);
+		}
+	}
+
+	$(".lort_menuSel").trendMenuSel({
+		box:{ 
+			r:"mainMindR",
+			t:"mainMindCo",
+			rt1:"mainContent",
+			rt2:"move_tgx2"
+		},
+		tm:"lort_tms",
+		th:"draw_switch_hover"
+	});
+})
+</script>

@@ -1,0 +1,58 @@
+	<div data-role='page' id="register" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role='content'>
+			<div class="login_title">
+				<span class="lgti">帐号注册</span>
+				<table class="lginfo">
+					<tr>
+						<td class="lgtis">帐号: </td>
+						<td class="lginps">
+							<input type="text" id="username" name="username" data-role="none" class="lgii" autofocus/>
+						</td>
+					</tr>
+					<tr>
+						<td class="lgtis">密码: </td>
+						<td class="lginps">
+							<input type="password" id="password" name="password" data-role="none" class="lgii" />
+						</td>
+					</tr>
+					<tr>
+						<td class="lgtis">验证码:</td>
+						<td class="lginps">
+							<input class="lgcht" type="password" id="charset" name="charset" data-role="none" />
+							<img class="lgcht" src="images/form/button_charset.png"/>
+							<table class="lgchang lgcht">
+								<tr><td>看不清?</td></tr>
+								<tr><td>换ㄧ张</td></tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<div id="login_form">
+	
+					<span class="lgbtns">
+
+						<a data-role="none" class="lgfbt " href="index.html" ><img src="images/form/button_registration.png"/></a>
+
+					</span>
+				</div>
+			</div>
+
+		</div><!--/content -->
+		
+	</div><!--/news-->

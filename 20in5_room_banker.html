@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/cycle/jquery.cycle.all.js"></script>
+	<script src="js/jgestures/jgestures.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script type="text/javascript" src="js/lottery_room.js"></script>
+
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="20in5_room_banker" >
+		<script>
+			//------------call fn
+			$(function(){
+
+				//Cycle Effect
+					$('.lro_subti').cycle({ fx: 'scrollDown', speed:    900, timeout:  2000});
+
+				// $("#20in5_room_banker").on( "pagebeforeshow", function( event ) {
+
+					var pageId = $(this);
+
+					/*參數:初始選號*/
+					var redArea = ".redBallArea";
+					var redballary =  [1,2,5]; //ex. Array(3,4,6,7); or  [3,4,6,7]
+
+
+					var blueArea = ".blueBallArea";
+					var blueballary =  [1]; //ex.Array(1,3); or [1]
+
+
+					$.fn.LottoryRoomX(pageId,redArea,"red",redballary);
+					$.fn.LottoryRoomX(pageId,blueArea,"blue",blueballary);
+					
+				// });
+				// $("#20in5_room_banker").on( "pageshow", function( event ) { 
+
+					var pageId = $(this);
+
+					/*參數*/
+					var redArea = ".redBallArea";
+					var limit_reds = 1;//紅球最小值
+					var limit_redl = 20;//紅球最最大值
+					var limit_redball = 20;//紅球取出球數上限制
+
+					var blueArea = ".blueBallArea";
+					var limit_blues = 1;//藍球最小值
+					var limit_bluel = 20;//藍球最最大值
+					var limit_blueball = 20;//藍球取出球數上限制
+
+					
+					$.fn.LottoryRoomZ(pageId,redArea,"red",limit_redball,limit_reds,limit_redl);
+					$.fn.LottoryRoomZ(pageId,blueArea,"blue",limit_blueball,limit_blues,limit_bluel);
+
+					//Hover Small List
+					$.fn.smallListMenu();
+				// })
+
+			})
+		</script>
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role='content'>
+			<div class="astro_subject">
+				<a href="#" onclick='$.fn.BHome("index.html",0);' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">20选5-胆拖</span>
+				<a href="20in5_room_trend.html" class="astro_backR2 A_btn" rel="external" >
+					<img src="images/b01/icon_chart.png"/>
+				</a>
+				<a class="astro_backR1 A_btn" rel="external" >
+					<img src="images/b01/icon_menu.png"/>
+				</a>
+				<div class="lor_smallList">
+					<a  href="20in5_room.html" data-ajax="false" data-external-page="true" class="lor_llist">普通投注</a>
+					<a  href="20in5_room_random.html" data-ajax="false" data-external-page="true" class="lor_llist" >机选</a>
+					<a  href="ez_room.html" data-transition="pop" class="lor_llist">参与合买</a>
+					<a href="#" class="lor_llist">玩法介绍</a>
+				</div>
+			</div><!--/astro_subject-->
+			<div class="lro_subti">
+				<div class="tpor_ctitle">
+					前期奖号: <span class="red01">1 | 5 | 6 | 7 | 9 </span>
+				</div>
+				<div class="tpor_ctitle">
+					目前奨池: <span class="red01">292317488.00</span>
+				</div>
+				<div class="tpor_ctitle">
+					当前期停售时间: <span class="red01">2014-03-11 19:45</span>
+				</div>
+			</div><!--/lro_subti-->
+			<!--前区胆------------------------------------------------------------>
+			<div class="redBallArea">
+				<div class="lro_fastbtn">
+					<div class="lro_le">
+						<span class="red02">胆码</span>(已选<span class="red01 lro_redsel">0</span>个（可选1〜20个）
+					</div>  
+				</div><!--/lro_fastbtn-->
+				<div class="lro_balltable">
+
+					<span class="lro_redball"></span>
+					
+					<table class='lro_redballarea'>
+						<tbody>
+							<tr>
+								<td class="lro_redballtd">01</td>
+								<td class="lro_redballtd">02</td>
+								<td class="lro_redballtd">03</td>
+								<td class="lro_redballtd">04</td>
+								<td class="lro_redballtd">05</td>
+								<td class="lro_redballtd">06</td>
+								<td class="lro_redballtd">07</td>
+							</tr>
+							<tr>
+								<td class="lro_redballtd">08</td>
+								<td class="lro_redballtd">09</td>
+								<td class="lro_redballtd">10</td>
+								<td class="lro_redballtd">11</td>
+								<td class="lro_redballtd">12</td>
+								<td class="lro_redballtd">13</td>
+								<td class="lro_redballtd">14</td>
+							</tr>
+							<tr>
+								<td class="lro_redballtd">15</td>
+								<td class="lro_redballtd">16</td>
+								<td class="lro_redballtd">17</td>
+								<td class="lro_redballtd">18</td>
+								<td class="lro_redballtd">19</td>
+								<td class="lro_redballtd">20</td>
+								<td ></td>
+							</tr>
+						</tbody>
+					</table><!--/lro_redballarea-->
+				</div><!--/lro_balltable-->
+			</div><!--/redBallArea-->
+			<!-------------------------------------------------------------->
+
+
+
+			<!--后区胆------------------------------------------------------------>
+			<div class="blueBallArea">
+				<div class="lro_fastbtn">
+					<div class="lro_le">
+						<span class="blue02">拖码</span> 已选<span class="blue01 lro_bluesel">0</span>个(可选1〜20个)  
+					</div>
+				</div><!--/lro_fastbtn-->
+				<div class="lro_balltable">
+
+					<span class="lro_blueball"></span>
+
+					<table class='lro_blueballarea'>
+						<tbody>
+							<tr>
+								<td class="lro_blueballtd">01</td>
+								<td class="lro_blueballtd">02</td>
+								<td class="lro_blueballtd">03</td>
+								<td class="lro_blueballtd">04</td>
+								<td class="lro_blueballtd">05</td>
+								<td class="lro_blueballtd">06</td>
+								<td class="lro_blueballtd">07</td>
+							</tr>
+							<tr>
+								<td class="lro_blueballtd">08</td>
+								<td class="lro_blueballtd">09</td>
+								<td class="lro_blueballtd">10</td>
+								<td class="lro_blueballtd">11</td>
+								<td class="lro_blueballtd">12</td>
+								<td class="lro_blueballtd">13</td>
+								<td class="lro_blueballtd">14</td>
+							</tr>
+							<tr>
+								<td class="lro_blueballtd">15</td>
+								<td class="lro_blueballtd">16</td>
+								<td class="lro_blueballtd">17</td>
+								<td class="lro_blueballtd">18</td>
+								<td class="lro_blueballtd">19</td>
+								<td class="lro_blueballtd">20</td>
+								<td ></td>
+							</tr>
+						</tbody>
+					</table><!--/lro_blueballarea-->
+				</div><!--/lro_balltable-->
+			</div><!--/blueBallArea-->
+			<!-------------------------------------------------------------------->
+
+		</div><!--/content -->
+		<script>
+
+		</script>
+		<div data-role='footer' class="lor_footer" data-position='fixed' style="background:#e1e1e1;" >
+			<div class="lorl_ezto">
+				<span class="lor_recycle"></span>
+				共18注 - 36元
+				<a href="20in5_room_list.html" data-role='none' data-ajax="false"  data-rel="external" >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+	</div><!--/20in5_room_banker-->
+	</span> <!-- end fastclick -->
+</body>
+</html>

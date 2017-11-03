@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/jgestures/jgestures.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script src="js/sporttery_f_room.js"></script>
+	<script type="text/javascript">
+		/*預設選取項目
+			sportf_games(i);
+			sporttery_f_room.html 胜平负
+			sporttery_f_room1.html 让球胜平负
+			sporttery_f_room2.html 比分
+			sporttery_f_room3.html 总进球
+			sporttery_f_room4.html 全半场
+			sporttery_f_room5.html 混合过关
+			sporttery_f_room6.html 2选1
+		*/
+		$(function(){
+			sportf_games(6);
+		})
+	</script>
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="sporttery_f_room" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 0</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role="content" class="ui-content" role="main">
+			<div class="astro_subject ">
+				<a onclick="$.fn.BHome(&quot;index.html&quot;,0);" class="astro_back A_btn ui-link"><img src="images/a01/00-02.png"></a>
+				<span class="title">
+					<span class="ef_list_h1">
+						足球竟彩-
+					</span>
+					<span data-role="none" class="ef_list_btn">
+						<div class="ef_list_arrow"></div>
+						<span class="sportf_titles">2选1</span>
+						
+						<div class="sportf_lightbox">
+							<table class="sportf_lightbox_tbs" style="display: none;">
+								<tbody><tr>
+									<td onclick="window.open('sporttery_f_room.html','_self')" class="sportf_tds">胜平负</td>
+									<td onclick="window.open('sporttery_f_room1.html','_self')" class="sportf_tds">让球胜平负</td>
+									<td onclick="window.open('sporttery_f_room2.html','_self')" class="sportf_tds">比分</td>
+								</tr>
+								<tr>
+									<td onclick="window.open('sporttery_f_room3.html','_self')" class="sportf_tds">总进球</td>
+									<td onclick="window.open('sporttery_f_room4.html','_self')" class="sportf_tds">全半场</td>
+									<td onclick="window.open('sporttery_f_room5.html','_self')" class="sportf_tds">混合过关</td>
+								</tr>
+								<tr>
+									<td onclick="window.open('sporttery_f_room6.html','_self')" class="sportf_tds on">2选1</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody></table>
+						</div>
+					</span><!--/ef_list_btn-->
+				</span>
+				<a class="sportf_backR1 ui-link">
+					<img src="images/b09/03.png">
+				</a>
+				<a class="astro_backR1 sportf_backR2 A_btn ui-link">
+					<img src="images/b09/04.png">
+				</a>
+
+				<div class="lor_smallList">
+					<a href="" data-ajax="false" data-external-page="true" class="lor_llist ui-link">专家推荐 </a>
+					<a href="" data-ajax="false" data-external-page="true" class="lor_llist ui-link">开奖信息 </a>
+					<a href="" data-transition="pop" class="lor_llist ui-link">玩法介绍 </a>
+					<a href="" class="lor_llist ui-link">新手引导</a>
+				</div>
+			</div>
+
+						<div class="nivdr_subti sportf_pointer">
+				<div class="sportf_chk">
+					2014年5月13日 星期二 8场可投
+					<span class="sportf_arw"></span>
+				</div>
+			</div><!--/lro_subti-->
+			<div class="sportf_list ">
+<!--/Game------------------------------------------------------------------>
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+				<!--/Game------------------------------------------------------------------>
+
+
+
+				
+			</div><!--/sportf_list-->
+						<div class="nivdr_subti sportf_pointer">
+				<div class="sportf_chk">
+					2014年5月13日 星期二 8场可投
+					<span class="sportf_arw"></span>
+				</div>
+			</div><!--/lro_subti-->
+			<div class="sportf_list ">
+<!--/Game------------------------------------------------------------------>
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+				<!--/Game------------------------------------------------------------------>
+
+
+
+				
+			</div><!--/sportf_list-->
+						<div class="nivdr_subti sportf_pointer">
+				<div class="sportf_chk">
+					2014年5月13日 星期二 8场可投
+					<span class="sportf_arw"></span>
+				</div>
+			</div><!--/lro_subti-->
+			<div class="sportf_list ">
+<!--/Game------------------------------------------------------------------>
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+								<div class="nivdr_game_content">
+					<div class="sprotf_main_game_area">
+						
+						<div>
+							<div class="sportf_li_left">
+								亞冠杯<br>
+								001<br>
+								18:27截止<br>
+								<span class="sportf_arw2"></span>
+							</div>
+							
+							<div class="sportf_li_right">
+
+								<!--2选1-->
+								<span class="sportf_gtype sportf_game">
+									<span class="sportf_bdn sportf_bd5">[1]西悉尼
+										<span class="blue01 sportf_n">主胜2.45</span>
+									</span>
+									<span class="sportf_bdn sportf_bd5">
+										川崎前峰[3]
+										<span class="blue01 sportf_n">主负2.45</span>
+									</span>
+								</span>
+								<!--/2选1-->
+							</div>
+						</div>
+						<!-------------------------------------------------------->
+
+						<span class="sportf_result_area">
+							
+							<!--2选1-->
+							<div class="sportf_game_trend" style="display: none;">
+								<table class="sportf_notearea">
+									<tbody><tr>
+										<td class="yellow01">历史交锋</td>
+										<td colspan="3" class="gray03">近6次交战,西悉尼4胜1平1负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">近期战绩</td>
+										<td colspan="3" class="gray03">主队4胜2平0负,客队1胜2平3负</td>
+									</tr>
+									<tr>
+										<td class="yellow01">平均赔率</td>
+										<td class="gray03">1.91</td>
+										<td class="gray03">3.46</td>
+										<td class="gray03">3.65</td>
+									</tr>
+								</tbody></table>
+								<div class="sport_result gray03"><a style="color:white" href="#sporttery_f_history" data-transition="fade" data-rel="external" class="ui-link">查看详细赛事分析 ＞ </a></div>
+							</div>
+							<!--/2选1-->
+						</span><!--/sportf_result_area-->
+					</div><!--/sprotf_main_game_area-->
+				</div><!--/nivdr_game_content-->
+				<!--/Game------------------------------------------------------------------>
+
+
+
+				
+			</div><!--/sportf_list-->
+						<div class="sportf_btmspace"></div><!--/sportf_btmspace-->
+		</div><!--/content -->
+		<div data-role='footer' class="lor_footer"  style="background:#e1e1e1;position: fixed;bottom: 0em;" >
+			<div class="lorl_ezto">
+				<span class="lor_recycle"></span>
+					已选<span class='sporttery_f_totalNum'>0</span>场
+				<a  href="sporttery_f_room_list6.html" data-role='none' data-ajax="false"  data-rel="external" data-role='none' >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+	</div><!--/sporttery_f_room-->
+
+	<!--History Page------------------------------------------------------------------>
+	<!--sporttery_f_history===================================-->
+		<div data-role='page' id="sporttery_f_history" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+		<div data-role='content' id="sporttery_f_history_content">
+			<div class="astro_subject ">
+				<a onclick='history.go(-1)' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">
+					<span class="ef_list_h1">
+						亞冠杯
+					</span>
+				</span>
+				<a class="sportf_backR2">
+					<img src="images/b01/icon_refresh.png"/>
+				</a>
+			</div>
+			<div class="sphistory_top_main">
+				<table class="sphistory_title sphistory_bbottom">
+						<td class='red01 sphistory_bright'>投主胜<span class="sphistory_a1">97%</span></td>
+						<td class='blue01 sphistory_bright'>投平<span class="sphistory_a1">1%</span></td>
+						<td class='green01'>投主负<span class="sphistory_a1">2%</span></td>
+					</tr>
+				</table><!--/sphistory_title-->
+				<div class="sphistory_mainboard">
+					<span class="sphistory_bordcont">
+						西悉尼
+						<span class="sphistory_bordnote">排名: <span class="sphistory_arrange">总4主3</span></span>
+					</span>
+					<span class="sphistory_bordcont">
+						－：－
+						<span class="sphistory_bordnote2">未开赛: <span class="sphistory_arrange">05-20-00:0</span></span>
+					</span>
+					<span class="sphistory_bordcont">
+						川崎前
+						<span class="sphistory_bordnote">排名: <span class="sphistory_arrange">总7客4</span></span>
+					</span>
+				</div><!--/sphistory_mainboard-->
+
+				<div class="sphistory_switch">
+					<span class="sphistory_btn on">赛事</span>
+					<span class="sphistory_btn">阵容</span>
+					<span class="sphistory_btn">分析</span>
+					<span class="sphistory_btn">赔率</span>
+				</div><!--/sphistory_switch-->
+
+			</div><!--/sphistory_top_main-->
+
+			<!--赛事-->
+			<div class="sphistory_contents">
+				<div class="nivdr_subti sportf_pointer">
+					比赛事件
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle">进球 点球 乌龙 双黄变红 换入 换出</span>
+				</div><!--/比赛事件-->
+
+				<div class="nivdr_subti sportf_pointer">
+					技术统计
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<table class="sportf_tableknote">
+							<tr>
+								<td class="sportf_tdknote">0%</td>
+								<td>控球率</td>
+								<td class="sportf_tdknote">0%</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>射门</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>射正</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>危险进攻</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>进攻</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>角球</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>犯规</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>黄牌</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+							<tr>
+								<td class="sportf_tdknote">0</td>
+								<td>红牌</td>
+								<td class="sportf_tdknote">0</td>
+							</tr>
+						</table>
+				</div><!--/技术统计-->
+
+			</div><!--/sphistory_contents-->
+
+			<!--阵容-->
+			<div class="sphistory_contents">
+				<div class="nivdr_subti sportf_pointer">
+					主队 西悉尼
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<span class="sportf_gamecontent_subtitle">傷停信息</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle">首发阵容</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle">替补阵容</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+				</div><!--/主队-->
+
+				<div class="nivdr_subti sportf_pointer">
+					客队 川崎前
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<span class="sportf_gamecontent_subtitle">傷停信息</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle">首发阵容</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle">替补阵容</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+				</div><!--/客队-->
+
+			</div><!--/sphistory_contents-->
+
+			<!--分析-->
+			<div class="sphistory_contents">
+				<div class="nivdr_subti sportf_pointer">
+					历史交锋
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<table class="sportf_tableknote">
+							<tr>
+								<td>赛事</td>
+								<td>日期</td>
+								<td>主队</td>
+								<td>比分</td>
+								<td>客队</td>
+								<td>胜负</td>
+							</tr>
+						</table>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+				</div><!--/历史交锋-->
+
+				<div class="nivdr_subti sportf_pointer">
+					近期战绩
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<span class="sportf_gamecontent_subtitle oldyellow01">西悉尼</span>
+						<table class="sportf_tableknote">
+							<tr>
+								<td>赛事</td>
+								<td>日期</td>
+								<td>主队</td>
+								<td>比分</td>
+								<td>客队</td>
+								<td>胜负</td>
+							</tr>
+						</table>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">川崎前</span>
+						<table class="sportf_tableknote">
+							<tr>
+								<td>赛事</td>
+								<td>日期</td>
+								<td>主队</td>
+								<td>比分</td>
+								<td>客队</td>
+								<td>胜负</td>
+							</tr>
+						</table>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+				</div><!--/近期战绩-->
+
+				<div class="nivdr_subti sportf_pointer">
+					积分排名
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<span class="sportf_gamecontent_subtitle oldyellow01">西悉尼</span>
+						<table class="sportf_tableknote">
+							<tr>
+								<td>类型</td>
+								<td>排名</td>
+								<td>赛</td>
+								<td>胜</td>
+								<td>平</td>
+								<td>负</td>
+								<td>进</td>
+								<td>失</td>
+								<td>净</td>
+								<td>积分</td>
+							</tr>
+						</table>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">川崎前</span>
+						<table class="sportf_tableknote">
+							<tr>
+								<td>类型</td>
+								<td>排名</td>
+								<td>赛</td>
+								<td>胜</td>
+								<td>平</td>
+								<td>负</td>
+								<td>进</td>
+								<td>失</td>
+								<td>净</td>
+								<td>积分</td>
+							</tr>
+						</table>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+				</div><!--/积分排名-->
+
+				<div class="nivdr_subti sportf_pointer">
+					未来三场
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<span class="sportf_gamecontent_subtitle oldyellow01">西悉尼</span>
+						<table class="sportf_tableknote">
+							<tr>
+								<td>赛事</td>
+								<td>日期</td>
+								<td>主队</td>
+								<td>客队</td>
+							</tr>
+						</table>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+						<span class="sportf_gamecontent_subtitle oldyellow01">川崎前</span>
+						<table class="sportf_tableknote">
+							<tr>
+								<td>赛事</td>
+								<td>日期</td>
+								<td>主队</td>
+								<td>客队</td>
+							</tr>
+						</table>
+						<span class="sportf_gamecontent_subtitle oldyellow01">暂无</span>
+				</div><!--/近期战绩-->
+
+			</div><!--/sphistory_contents-->
+
+			<!--赔率-->
+			<div class="sphistory_contents">
+				<div class="nivdr_subti sportf_pointer">
+					欧赔
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<table class="sportf_tableknote2">
+							<tr>
+								<td class="sportf_tableknote2_border on">澳门</td>
+								<td>胜</td>
+								<td>平</td>
+								<td>负</td>
+							</tr>
+							<tr>
+								<td class="sportf_tableknote2_border on">初盘</td>
+								<td>2.1</td>
+								<td>3.2</td>
+								<td>3.05</td>
+							</tr>
+							<tr>
+								<td class="sportf_tableknote2_border on">即时</td>
+								<td>2.1</td>
+								<td>3.2</td>
+								<td>3.05</td>
+							</tr>
+						</table>
+				</div><!--/欧赔-->
+
+				<div class="nivdr_subti sportf_pointer">
+					亚赔
+					<span class="sportf_arw"></span>
+				</div>
+				<div class="sportf_gamecontent">
+						<table class="sportf_tableknote2">
+							<tr>
+								<td class="sportf_tableknote2_border on">澳门</td>
+								<td>主队水位</td>
+								<td>让球</td>
+								<td>客队水位</td>
+							</tr>
+							<tr>
+								<td class="sportf_tableknote2_border on">初盘</td>
+								<td>2.1</td>
+								<td>3.2</td>
+								<td>3.05</td>
+							</tr>
+							<tr>
+								<td class="sportf_tableknote2_border on">即时</td>
+								<td>2.1</td>
+								<td>3.2</td>
+								<td>3.05</td>
+							</tr>
+						</table>
+				</div><!--/欧赔-->
+			</div><!--/sphistory_contents-->
+
+		</div><!--/content -->
+	</div>
+	<!--/sporttery_f_history===================================-->
+	<!--/History Page------------------------------------------------------------------>
+
+	<!--sporttery_f_filter===================================-->
+				<!--===========Lightbox==================-->
+			<div class="sporttery_f_select_filter">
+				<div class="sporttery_f_lc">
+					<table class="sporttery_f_lc1">
+						<tr>
+							<td>赛事选择</td>
+						</tr>
+					</table>
+					<table class="sporttery_f_lc3_2 cont1 sporttery_f_contents">
+						<tr>
+							<td class="sportf_ev2">
+								<span>全选</span>
+							</td>
+							<td class="sportf_ev2">
+								<span>反选</span>
+							</td>
+							<td class="sportf_ev2">
+								<span>仅五大联赛</span>
+							</td>
+						</tr>
+					</table>
+					<table class="sporttery_f_lc3_2 cont2 sporttery_f_contents">
+						<tr>
+							<td class="sportf_ev2">
+								<span class="sportf_data">日联赛杯</span>
+							</td>
+							<td class="sportf_ev2">
+								<span class="sportf_data">瑞典超</span>
+							</td>
+							<td class="sportf_ev2">
+								<span class="sportf_data">荔超附</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="sportf_ev2">
+								<span class="sportf_data">葡超附</span>
+							</td>
+							<td class="sportf_ev2">
+								<span class="sportf_data">巴甲</span>
+							</td>
+							<td class="sportf_ev2">
+								<span class="sportf_data">美大联赛</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="sportf_ev2">
+								<span class="sportf_data">欧冠杯</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='3' style="text-align:left">
+								<input type="checkbox" class="sporttery_f_ck_3" id="sporttery_f_ck_3" style="float:left">
+								<label for="sporttery_f_ck_3" data-role="none" style="float:left">仅显示热门比赛</label>
+							</td>
+						</tr>
+					</table>
+
+					<table class="sporttery_f_lc4_3 cont3">
+						<tr>
+							<td>取消</td>
+							<td>確定</td>
+						</tr>
+					</table>
+				</div>
+			</div><!--/sporttery_f_select_filter-->
+			<!--/===========Lightbox==================-->
+	</span> <!-- end fastclick -->
+</body>
+</html>

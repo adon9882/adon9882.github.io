@@ -1,0 +1,148 @@
+	<div data-role='page' id="draw" >
+		<script type="text/javascript" src="js/calender.js"></script>
+		<script type="text/javascript" src="js/draw_room_filter.js"></script>
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+		<div data-role='content'>
+			<script>
+			$(function(){
+				/*所有彩种
+				SelectAll:
+					-draw_sel 所有彩种
+					-draw_sel1 大乐透
+					-draw_sel2 排列3
+					-draw_sel3 排列5
+				中獎狀態
+				CheckAll:
+					-draw_chk 全部
+					-draw_chk1 待開將
+					-draw_chk2 未中獎
+					-draw_chk3 已中獎
+				*/
+				var SelectAll = Array("draw_sel","draw_sel1","draw_sel2","draw_sel3");
+				var CheckAll = Array('draw_chk','draw_chk1','draw_chk2','draw_chk3');
+				$(".draw_select").drawroom(SelectAll,CheckAll);
+			})
+			</script>
+			<div class="astro_subject">
+				<a data-rel="back" class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">
+					<select data-role="none" class="draw_select">
+						<option value="0">所有彩种</option>
+						<option value="1">大乐透</option>
+						<option value="2">排列3</option>
+						<option value="3">排列5</option>
+					</select>
+				</span>
+				<span class="astro_backR"> 
+					<a >
+						
+						<script type="text/javascript">
+						  $(function() {
+						    $("#datepicker").on('change',function(){
+						    	/*選擇日利後，要執行的動作*/
+						    })
+						  });
+						</script>
+						<input type="text" data-role="none" id="datepicker"/>
+						
+					</a>
+
+				</span>
+			</div>
+			<table class="draw_sect">
+				<tr>
+					<td class="draw_switch draw_switch_hover draw_bl" >全部</td>
+					<td class="draw_switch draw_bl" >待開將</td>
+					<td class="draw_switch draw_bl" >未中獎</td>
+					<td class="draw_switch draw_bl" >已中獎</td>
+				<tr>
+			</table>
+			<div >
+				<ul data-role='listview' data-inset="true">
+					<li class="draw_chk draw_chk1 draw_sel draw_sel1">
+						<a href="draw_room_list.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								大乐透
+								<p class="draw_blue">合购</p>
+							</span>
+							<span class="draw_a draw_o2">
+								E1234567890
+								<p class="draw_gray">2014-03-12 00:00:00</p>
+							</span>
+							<span class="draw_a draw_o3 draw_green">
+								待开奖
+							</span>
+						</a>
+					</li><!--/li-->
+					<li class="draw_chk draw_chk1 draw_sel draw_sel1">
+						<a href="draw_room_detail.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								大乐透
+								<p class="draw_blue">追号</p>
+							</span>
+							<span class="draw_a draw_o2">
+								E1234567890
+								<p class="draw_gray">2014-03-12 00:00:00</p>
+							</span>
+							<span class="draw_a draw_o3 draw_green">
+								待开奖
+							</span>
+						</a>
+					</li><!--/li-->
+					<li class="draw_chk draw_chk2 draw_sel draw_sel2">
+						<a href="draw_room_detail.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								排列3
+								<p class="draw_blue"></p>
+							</span>
+							<span class="draw_a draw_o2">
+								E1234567890
+								<p class="draw_gray">2014-03-12 00:00:00</p>
+							</span>
+							<span class="draw_a draw_o3 draw_gray">
+								未中奖
+							</span>
+						</a>
+					</li><!--/li-->
+					<li class="draw_chk draw_chk3 draw_sel draw_sel3">
+						<a href="draw_room_detail.html" data-external-page="true" data-transition="slide" class="draw_box">
+							<span class="draw_a draw_o1">
+								排列5
+								<p class="draw_blue"></p>
+							</span>
+							<span class="draw_a draw_o2">
+								E1234567890
+								<p class="draw_gray">2014-03-12 00:00:00</p>
+							</span>
+							<span class="draw_a draw_o3 draw_red">
+								已中奖
+							</span>
+						</a>
+					</li><!--/li-->
+					
+				</ul>
+			</div><!--/ astro_news_list-->
+
+
+		</div><!--/content -->
+		<div data-role='footer' class="astro_footer" id='main' style="text-align:center;display:none;">
+			<p>版权所有: 浙江省体育彩票管理中心</p>
+			<p>域名: 浙江体育彩票网 <a href="http://www.zjlottery.com" >www.zzjlottery.com</a></p>
+			<p>浙ICP备11013169号</p>
+		</div><!--/footer-->
+		
+	</div><!--/draw-->

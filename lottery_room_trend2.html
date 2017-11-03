@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/drawing/jquery.drawing.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script type="text/javascript" src="js/lottery_room.js"></script>
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="lottery_room_trend2" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div class="lort_content2">
+			<div class="astro_subject">
+				<a onclick='$.fn.BHome("","back");' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">大乐透-走势图</span>
+				<a class="astro_backR A_btn ui-link" ><img src="images/b01/icon_refresh.png"></a>
+			</div><!--/astro_subject-->
+<!------------------------------------------------------------------>
+
+	<table class="draw_sect lort_menuSel">
+		<tr>
+			<td class="lort_tms draw_switch draw_bl " onclick="window.open('lottery_room_trend.html?b=1','_self');" >前区走势</td>
+			<td class="lort_tms draw_switch draw_bl" onclick="window.open('lottery_room_trend.html?b=2','_self');">后区走势</td>
+			<td class="lort_tms draw_switch draw_bl draw_switch_hover" >投注倾向</td>
+		<tr>
+	</table>
+
+<!------------------------------------------------------------------>	
+
+			<div class="lotr2_filter">
+				<div class="lotr2_filterbox">
+					<div>14026期（当前期）</div>
+					<div>红球：<span class="lotr2_red_cont"></span></div>
+					<div>蓝球：<span class="lotr2_blue_cont"></span></div>
+				</div>
+				<div class="lotr2_filterbox">
+					<div>　</div>
+					<div>　</div>
+					<div class="lotr2_filterbtn">
+						<span class="lotr2_filter_txt">默认排序</span>
+						<span class="lotr2_noarrow"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="lotr3_box">
+					<!--PEP1-->
+					<div class="lotr2_col">
+						<div class="lotr2_touch_move">
+							<div class="pep1" style="-webkit-user-select: none; margin: 0px; position: absolute; top: 0px; left: 0px;">
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">01</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">02</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">03</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">04</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">05</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">06</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">07</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">08</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">09</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">10</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">11</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">12</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">13</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">14</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">15</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">16</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">17</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">18</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">19</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">20</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">21</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">22</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">23</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">24</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">25</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">26</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">27</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">28</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">29</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">30</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">31</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">32</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">33</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">34</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_red2 lotr2_redball">35</span><!--/球號-->
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr2_num" value="57"><!--/進度條數值-->
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line2" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										</div><!--/lotr2_list-->
+								</div>
+						</div>
+					</div><!--/PEP1-->
+
+					<!--PEP2-->
+					<div class="lotr2_col">
+						<div class="lotr2_touch_move">
+							<div class="pep1" style="-webkit-user-select: none; margin: 0px; position: absolute; top: 0px; left: 0px;">
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">01</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">02</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">03</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">04</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">05</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">06</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">07</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">08</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">09</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">10</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">11</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">12</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">13</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">14</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">15</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">16</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">17</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																			<div class="lotr2_list">
+												<!--球號-->
+												<span class="  lort_cx  lort_cz_blue2 lotr2_blueball">18</span><!--/球號-->
+
+												<span class="lotr2_a ">
+													<!--進度條數值-->
+													<input type="hidden" class="lotr3_num" value="57"><!--/進度條數值-->
+
+													<div class="lotr2_line1" style="gray01">
+														<div class="lotr2_line3" style="width: 57%;"></div>
+													</div>
+													<span class="lort2_nums_">17929</span>
+												</span><!--/lotr2_a-->
+										
+											
+										</div><!--/lotr2_list-->
+																</div>
+						</div>
+					</div><!--/PEP2-->
+			</div><!--/lotr3_box-->
+
+
+		</div><!--/content -->
+
+<!------------------------------------------------------------------>	
+		<div class="lor_footer2" style="background:#e1e1e1;position:absolute;bottom:0;z-index:30;" >
+			<div class="lorl_ezto2">
+				<span class="lor_recycle"></span>
+				5 个红球．4 个蓝球．6 注．12 元
+				<a  href="lottery_room_list.html" data-role='none' data-ajax="false"  data-rel="external" data-role='none' >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+	</div><!--/lottery_room_trend2-->
+	</span> <!-- end fastclick -->
+</body>
+</html>
+<script>
+	$(window).load(function(){
+		$.fn.trendMenuSel = function(tg){
+			var bp = $(this);
+			bp.find("."+tg.tm).each(function(i){
+				$(this).on('click',function(){
+					$("."+tg.tm).removeClass(tg.th);
+					$(this).addClass(tg.th);
+				})
+			});
+		}
+		$(".lort_menuSel").trendMenuSel({
+			tm:"lort_tms",
+			th:"draw_switch_hover"
+		});
+		
+	})
+
+	//切換排序按鈕
+	$(function(){
+		$(".lotr2_filter_txt").disableSelection();
+		$(".lotr2_filterbtn").click(function(){
+
+			var bp1 = $(this).find(".lotr2_filter_txt");
+			var bp2 = $(this).find(".lotr2_noarrow");
+
+			if(bp2.hasClass("lotr2_arrow_down")){
+				bp1.text("默认排序");
+				bp2.removeClass("lotr2_arrow_down");
+			}else{
+				bp1.text("投注比例排序");
+				bp2.addClass("lotr2_arrow_down");
+			}
+		})
+	})
+	//進度條
+	var ez_line = function(){
+		$(".lotr2_list").each(function(){
+			var ezNum = $(this).find(".lotr2_num").val();
+			$(".lotr2_line2").css({width: ezNum+"%"});
+			var ezNum3 = $(this).find(".lotr3_num").val();
+			$(".lotr2_line3").css({width: ezNum3+"%"});
+	})};
+	setTimeout(function(){ez_line();},600);
+	//校正高度
+	$(function(){
+			$.fn.reCountHeight =  function(){
+				var a = $(".astro_head").outerHeight();
+				var b = $(".astro_subject").outerHeight();
+				var c = $(".lorl_ezto2").outerHeight();
+				var d = $(".draw_sect").outerHeight();
+				var f = $(".lotr2_filter").outerHeight();
+				var w =$(window).outerHeight();
+				var e = w-a-b-c-d-f;
+				if(e==$(".lotr2_touch_move").outerHeight()){
+					return;
+				}
+				console.log('gogogo');
+				$(".lotr2_touch_move").outerHeight(e);
+			}
+	})
+	$(window).load(function(){
+			$.fn.reCountHeight();
+	})
+
+	//選取球
+	$(function(){
+		$.fn.changeT2Ball = function(a,b,c){
+			$(this).click(function(){
+				var bp = $(this);
+				if(bp.hasClass(a)){
+					bp.removeClass(a);
+					bp.addClass(b);
+				}else{
+					bp.addClass(a);
+					bp.removeClass(b);
+				}
+				//取得選取球的號碼
+				var nbs = Array();
+				$("."+b).each(function(i){
+					nbs[i] =$(this).text();
+				});
+				nbs.sort();
+				nbs = nbs.join(' ');
+				$("."+c).text(nbs);
+				$.fn.reCountHeight();
+			});
+		}; 
+
+		$(".lotr2_redball").changeT2Ball("lort_cz_red2","lort_cz_red","lotr2_red_cont");
+		$(".lotr2_blueball").changeT2Ball("lort_cz_blue2","lort_cz_blue","lotr2_blue_cont");
+		$(".lor_recycle").on('click',function(){
+			$(".lotr2_red_cont, .lotr2_blue_cont").text('');
+		});
+	})
+
+	$(function(){
+
+		//Touch Fn
+		$('.pep1').pep({
+			axis: "y",
+			shouldEase: true,
+			easeDuration: '500',
+			useCSSTranslation: false,
+			drag:function(ev, obj){
+				
+			},
+			stop: function(ev, obj){
+				PreventFar(ev, obj);
+			},
+			rest: function(ev, obj){ 
+				PreventFar(ev, obj); 
+			}
+		});
+
+		//Prevent Go so Far
+		function PreventFar( ev, obj){
+			var x = obj.$el.position().left;
+			var y = obj.$el.position().top;
+			var all_h = obj.$el.outerHeight() - obj.$el.parent().outerHeight();
+			
+			if ( -y > (all_h) ){
+		    obj.$el.css({ top: -all_h })
+			}
+		                          
+			if ( y > 0 ){ 
+		       obj.$el.css({ top: 0 });
+			}
+		}
+
+		// Pad Treatment
+		var strPad = function(g,a,b){
+			for(var d = 0 ;
+			 d< g.length;
+			 d++){
+				g[d] = ( a + g[d] ).substr( -b );
+			}
+			return g;
+		}
+
+	})
+</script>

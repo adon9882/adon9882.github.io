@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.datepicker.css" />
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/flexslider/flexslider.css"/>
+	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/plugin/childbrowser.js"></script>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/jgestures/jgestures.min.js"></script>
+	<script src="js/jquery/jquery.ui.datepicker.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/flexslider/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/lottery_room.js"></script>
+
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="lottery_room" >
+		<script>
+			//------------call fn
+			$(function(){
+				// $("#lottery_room").on( "pagebeforeshow", function( event ) { 
+
+					var pageId = $(this);
+
+					/*參數:初始選號*/
+					var redArea = ".redBallArea";
+					var redballary =  [1,2,5,6,8]; //ex. Array(3,4,6,7); or  [3,4,6,7]
+
+					var blueArea = ".blueBallArea";
+					var blueballary =  [4,6]; //ex.Array(1,3); or [1]
+
+					$.fn.LottoryRoomX(pageId,redArea,"red",redballary);
+					$.fn.LottoryRoomX(pageId,blueArea,"blue",blueballary);
+
+				// });
+				// $("#lottery_room").on( "pageshow", function( event ) { 
+
+					var pageId = $(this);
+
+					/*參數*/
+					var redArea = ".redBallArea";
+					var limit_reds = 1;//紅球最小值
+					var limit_redl = 35;//紅球最最大值
+					var limit_redball = 18;//紅球取出球數上限制
+
+					var blueArea = ".blueBallArea";
+					var limit_blues = 1;//藍球最小值
+					var limit_bluel = 12;//藍球最最大值
+					var limit_blueball = 12;//藍球取出球數上限制
+					
+					$.fn.LottoryRoomZ(pageId,redArea,"red",limit_redball,limit_reds,limit_redl);
+					$.fn.LottoryRoomZ(pageId,blueArea,"blue",limit_blueball,limit_blues,limit_bluel);
+
+					//Hover Small List
+					$.fn.smallListMenu();
+				// })
+			})
+		</script>
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role='content' style="margin-bottom:20em">
+			<div class="astro_subject">
+				<a href="#" onclick='$.fn.BHome("index.html",0);' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">大乐透-普通投注</span>
+				<a href="lottery_room_trend.html" class="astro_backR2 A_btn" rel="external" data-ajax="false">
+					<img src="images/b01/icon_chart.png"/>
+				</a>
+				<a class="astro_backR1 A_btn" rel="external" >
+					<img src="images/b01/icon_menu.png"/>
+				</a>
+				<div class="lor_smallList">
+					<a  href="lottery_room_banker.html" data-ajax="false" data-external-page="true" class="lor_llist">胆拖</a>
+					<a  href="lottery_room_random.html" data-ajax="false" data-external-page="true" class="lor_llist">机选</a>
+					<a href="../ez/ez_room.html" data-transition="pop" class="lor_llist">参与合买</a>
+					<a href="#" class="lor_llist">玩法介绍</a>
+
+				</div>
+			</div><!--/astro_subject-->
+			<style>
+			</style>
+			<div class="lro_subti">
+				目前奨池: <span class="red01">292317488.00</span>
+			</div><!--/lro_subti-->
+			<!--紅球------------------------------------------------------------>
+			<div class="redBallArea">
+				<div class="lro_fastbtn">
+					<div class="lro_le">
+						<span class="red02 ">红球</span> 已选<span class="red01 lro_redsel">0</span>个（可选5〜18个）
+					</div>  
+					
+					<select class="lro_le2 red03 redfastsel1" data-role="none">
+						<option value='5'>5个</option>
+						<option value='6'>6个</option>
+						<option value='7'>7个</option>
+						<option value='8'>8个</option>
+						<option value='9'>9个</option>
+						<option value='10'>10个</option>
+						<option value='11'>11个</option>
+						<option value='12'>12个</option>
+						<option value='13'>13个</option>
+						<option value='14'>14个</option>
+						<option value='15'>15个</option>
+						<option value='16'>16个</option>
+						<option value='17'>17个</option>
+						<option value='18'>18个</option>
+					</select>
+					<div class="lro_le2 red02 redfastsel2">&nbsp;快速选号&nbsp;</div>
+				</div><!--/lro_fastbtn-->
+				<div class="lro_balltable">
+
+					<span class="lro_redball"></span>
+					
+					<table class='lro_redballarea'>
+						<tbody>
+							<tr>
+								<td class="lro_redballtd">01</td>
+								<td class="lro_redballtd">02</td>
+								<td class="lro_redballtd">03</td>
+								<td class="lro_redballtd">04</td>
+								<td class="lro_redballtd">05</td>
+								<td class="lro_redballtd">06</td>
+								<td class="lro_redballtd">07</td>
+							</tr>
+							<tr>
+								<td class="lro_redballtd">08</td>
+								<td class="lro_redballtd">09</td>
+								<td class="lro_redballtd">10</td>
+								<td class="lro_redballtd">11</td>
+								<td class="lro_redballtd">12</td>
+								<td class="lro_redballtd">13</td>
+								<td class="lro_redballtd">14</td>
+							</tr>
+							<tr>
+								<td class="lro_redballtd">15</td>
+								<td class="lro_redballtd">16</td>
+								<td class="lro_redballtd">17</td>
+								<td class="lro_redballtd">18</td>
+								<td class="lro_redballtd">19</td>
+								<td class="lro_redballtd">20</td>
+								<td class="lro_redballtd">21</td>
+							</tr>
+							<tr>
+								<td class="lro_redballtd">22</td>
+								<td class="lro_redballtd">23</td>
+								<td class="lro_redballtd">24</td>
+								<td class="lro_redballtd">25</td>
+								<td class="lro_redballtd">26</td>
+								<td class="lro_redballtd">27</td>
+								<td class="lro_redballtd">28</td>
+							</tr>
+							<tr>
+								<td class="lro_redballtd">29</td>
+								<td class="lro_redballtd">30</td>
+								<td class="lro_redballtd">31</td>
+								<td class="lro_redballtd">32</td>
+								<td class="lro_redballtd">33</td>
+								<td class="lro_redballtd">34</td>
+								<td class="lro_redballtd">35</td>
+							</tr>
+						</tbody>
+					</table><!--/lro_redballarea-->
+				</div><!--/lro_balltable-->
+			</div><!--/redBallArea-->
+			<!-------------------------------------------------------------------------->
+
+			<!--籃球------------------------------------------------------------>
+			<div class="blueBallArea">
+				<div class="lro_fastbtn">
+					<div class="lro_le">
+						<span class="blue02">蓝球</span> 已选<span class="blue01 lro_bluesel">0</span>个(可选2~12个)  
+					</div>
+					
+					<select class="lro_le2 blue03 bluefastsel1" data-role="none">
+						<option value="2">2个</option>
+						<option value="3">3个</option>
+						<option value="4">4个</option>
+						<option value="5">5个</option>
+						<option value="6">6个</option>
+						<option value="7">7个</option>
+						<option value="8">8个</option>
+						<option value="9">9个</option>
+						<option value="10">10个</option>
+						<option value="11">11个</option>
+						<option value="12">12个</option>
+					</select>
+					<div class="lro_le2 blue02 bluefastsel2">&nbsp;快速选号&nbsp;</div>
+				</div><!--/lro_fastbtn-->
+				<div class="lro_balltable">
+
+					<span class="lro_blueball"></span>
+
+					<table class='lro_blueballarea'>
+						<tbody>
+							<tr>
+								<td class="lro_blueballtd">01</td>
+								<td class="lro_blueballtd">02</td>
+								<td class="lro_blueballtd">03</td>
+								<td class="lro_blueballtd">04</td>
+								<td class="lro_blueballtd">05</td>
+								<td class="lro_blueballtd">06</td>
+								<td class="lro_blueballtd">07</td>
+							</tr>
+							<tr>
+								<td class="lro_blueballtd">08</td>
+								<td class="lro_blueballtd">09</td>
+								<td class="lro_blueballtd">10</td>
+								<td class="lro_blueballtd">11</td>
+								<td class="lro_blueballtd">12</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table><!--/lro_blueballarea-->
+				</div><!--/lro_balltable-->
+			</div><!--/blueBallArea-->
+			<!-------------------------------------------------------------------------->
+
+
+		</div><!--/content -->
+		<script>
+
+		</script>
+		<div data-role='footer' class="lor_footer"  style="background:#e1e1e1;position: fixed;bottom: 0em;" >
+			<div class="lorl_ezto">
+				<span class="lor_recycle"></span>
+				共18注 - 36元
+				<a  href="lottery_room_list.html" data-role='none' data-ajax="false"  data-rel="external" data-role='none' >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+	</div><!--/lottery_room-->
+	</span> <!-- end fastclick -->
+</body>
+</html>

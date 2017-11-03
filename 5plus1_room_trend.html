@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/drawing/jquery.drawing.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script type="text/javascript" src="js/lottery_room.js"></script>
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="lottery_room_trend" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+		<style>
+		</style>
+		<div class="lort_content1">
+			<div class="astro_subject">
+				<a onclick='$.fn.BHome("","back");' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">排列5 - 走势图</span>
+				<a class="astro_backR1 A_btn" rel="external" >
+					<img src="images/b02/05.png"/>
+				</a>
+			</div><!--/astro_subject-->
+<!------------------------------------------------------------------>
+	<table class="draw_sect lort_menuSel">
+		<tr>
+			<td class="lort_tms draw_switch2 draw_bl draw_switch_hover">万位</td>
+			<td class="lort_tms draw_switch2 draw_bl " >千位</td>
+			<td class="lort_tms draw_switch2 draw_bl " >百位</td>
+			<td class="lort_tms draw_switch2 draw_bl " >十位</td>
+			<td class="lort_tms draw_switch2 draw_bl " >个位</td>
+		<tr>
+	</table>
+	<!--上-->
+	<div class="touch_trend_boxs">
+		<div class="clearbox ">
+			<span class='lorl_trend_ord' data-role='none'>
+				期号<span class="arrnont arrow_up_" data-role='none'></span>
+			</span>
+		</div>
+		<div class="touch_move_col">
+				<table class="mainMindCo TableCollapse oneHundred" style="width: 349px; left: 0px;">
+					<tbody><tr>
+								<td class="co_bgs trend_bd_red lort_cx">
+									0
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									1
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									2
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									3
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									4
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									5
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									6
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									7
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									8
+								</td>
+								<td class="co_bgs trend_bd_red lort_cx">
+									9
+								</td>
+							</tr>
+						</tbody>
+					</table>
+		</div>
+		<!--中-->
+		<div class='touch_move_row'>
+			<div class="touch_row">
+				<table class="mainMindR TableCollapse" width="100%" style="top: 0px;">
+					<tbody><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14013
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14014
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14015
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14016
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14017
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14018
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14019
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14020
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14021
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14022
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14023
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14024
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14025
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14026
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14027
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14028
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14029
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14030
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14031
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14032
+								</td></tr><tr>
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14033
+								</td></tr><tr class="odd">
+								<td class="lort_cz trend_bd_red trend_bd_blue">
+									14034
+								</td></tr>				</tbody></table>
+			</div>
+		</div>
+		<div class='touch_move'>
+			<div class='pep'>
+				<table class="mainContent TableCollapse oneHundred" style="width: 349px;">
+					<tbody><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td></tr><tr class="odd">
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red trend_bd_blue lort_cx lort_cz_red">
+								9
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!--下-->
+		<div class="clearbox red05">
+			<span class='lorl_trend_ord' data-role='none'>
+				选号
+			</span>
+		</div>
+		<div class="touch_move_col_ball red05">
+				<table class="mainMindCo TableCollapse mainMinSelect oneHundred" style="width: 349px; left: 0px;">
+					<tbody><tr>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								0
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								1
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								2
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								3
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								4
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								5
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								6
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								7
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								8
+							</td>
+							<td class="lort_cz trend_bd_red lort_cx lort_rrr lort_cz_red2">
+								9
+							</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+	</div>
+<!------------------------------------------------------------------>	
+		</div><!--/content -->
+
+
+
+
+		<div data-role='footer' class="lor_footer2" style="background:#e1e1e1;" >
+			<div class="sport_selectnum">
+				<span class="sport_n1">万位:　　</span>
+				<span class="sport_n2">千位:　　</span>
+				<span class="sport_n3">百位:　　</span>
+				<span class="sport_n4">十位:　　</span>
+				<span class="sport_n5">个位:　　</span>
+			</div>
+			<div class="lorl_ezto2">
+				<span class="lorltr_lost red01">遺漏</span>
+				共18注 - 36元
+				<a  href="5plus1_room_list.html" data-role='none' data-ajax="false"  data-rel="external" data-role='none' >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+	</div><!--/lottery_room_trend-->
+	</span> <!-- end fastclick -->
+</body>
+</html>
+<script>
+$(window).load(function(){
+		//Ajust Touch Table Width
+		var ohtd = $(".touch_move_col").width();
+		$(".oneHundred").outerWidth(ohtd);
+	setTimeout(function(){
+		//Ajust Touch Table Height 
+		var a = $(".astro_head").outerHeight();
+		var b = $(".astro_subject").outerHeight();
+		var c = $(".sport_selectnum").outerHeight();
+		var d = $(".clearbox").outerHeight();
+		var f = $(".draw_sect").outerHeight();
+		var w =$(window).outerHeight();
+		var e = w-a-b-c-d-d-d-f;
+		$(".touch_move").outerHeight(e);
+		$(".touch_move_row").outerHeight(e);
+		
+	},200);
+	//odd
+	$(".mainContent tr:odd").addClass('odd');
+	$(".mainMindR tr:odd").addClass('odd');
+})
+</script>
+<script>
+$(function(){
+
+	//Parameter
+	var tg={co1:'.mainMindR',co2:'.mainMindCo'};
+
+	//Touch Fn
+	$('.touch_move .pep').pep({
+		axis: "y",
+		shouldEase: true,
+		easeDuration: '500',
+		useCSSTranslation: false,
+		start:function(ev, obj){
+
+		},
+		drag:function(ev, obj){
+
+		},
+		stop: function(ev, obj){
+			PreventFar(tg, ev, obj); 
+		},
+		rest: function(ev, obj){ 
+			PreventFar(tg, ev, obj); 
+		}
+	});
+
+	//Prevent Go so Far
+	function PreventFar( tg , ev, obj){
+		var x = obj.$el.position().left;
+		var y = obj.$el.position().top;
+		var all_h = obj.$el.outerHeight() - obj.$el.parent().outerHeight();
+		$(tg.co1).stop().css({top: y});
+
+		if ( -y > (all_h) ){
+	    obj.$el.stop().css({ top: -all_h })
+			$(tg.co1).stop().css({top: -all_h});
+		}
+	                          
+		if ( y > 0 ){ 
+	       obj.$el.stop().css({ top: 0 });
+			$(tg.co1).stop().css({top: 0, position:'absolute'});
+		}
+	}
+
+	// Pad Treatment
+	var strPad = function(g,a,b){
+		for(var d = 0 ;
+		 d< g.length;
+		 d++){
+			g[d] = ( a + g[d] ).substr( -b );
+		}
+		return g;
+	}
+
+	//Select Ball
+	$.fn.lortSelectBall = function(tg,r1,r2){
+		var main = $(this);
+		main.find("."+tg).each(function(i){
+			$(this).click(function(){
+				if($(this).hasClass(r1)){
+					$(this).removeClass(r1).addClass(r2);
+				}else{
+					$(this).removeClass(r2).addClass(r1);
+				}
+			})
+		})
+	}
+	$(".mainMinSelect").lortSelectBall("lort_rrr",'lort_cz_red','lort_cz_red2');
+	$(".mainMinSelect").lortSelectBall("lort_bbb",'lort_cz_blue','lort_cz_blue2');
+
+	//Change Arrow Direction
+	$(".lorl_trend_ord").on('click',function(){
+		var aj = $(this).find(".arrnont").hasClass("arrow_up_");
+		if(aj){
+			$(this).find(".arrnont").removeClass("arrow_up_").addClass("arrow_down_");
+		}else{
+			$(this).find(".arrnont").removeClass("arrow_down_").addClass("arrow_up_");
+		}
+	})
+
+
+})
+
+
+//走勢篩選按鈕
+$(window).load(function(){
+
+	//Hash URl GET Value
+	$.fn.getUrlVars = function (){
+	  var vars = [], hash;
+	  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	  for(var i = 0; i < hashes.length; i++)
+	  {
+	      hash = hashes[i].split('=');
+	      vars.push(hash[0]);
+	      vars[hash[0]] = hash[1];
+	  }
+	  return vars;
+	}
+
+	//Menu Select Ajust
+	$.fn.trendMenuSel = function(tg){
+		var bp = $(this);
+		 function DropAj(bx,i){
+			$("."+bx.r).css({top: 0});  
+				$("."+bx.rt1).css({left:0,top:0});
+				$("."+bx.t).css({left: 0});
+		}
+		
+		bp.find("."+tg.tm).each(function(i){
+			$(this).on('click',function(){
+				$("."+tg.tm).removeClass(tg.th);
+				$(this).addClass(tg.th);
+				DropAj(tg.box,i+1);
+			})
+		});
+
+
+		/*Go To Blue Ball site -  if isset $_GET['b']=2*/
+		var myurl = $.fn.getUrlVars();
+		if(typeof myurl['b'] == "undefined"){
+			myurl = Array();
+			myurl['b'] = 1;
+		}
+		var b_get = myurl['b']-1;
+
+			$("."+tg.tm).removeClass(tg.th);
+			bp.find("."+tg.tm).eq(b_get).addClass(tg.th);
+			DropAj(tg.box,myurl['b']);
+	}
+
+	$(".lort_menuSel").trendMenuSel({
+		box:{ 
+			r:"mainMindR",
+			t:"mainMindCo",
+			rt1:"pep",
+			rt2:"move_tgx2"
+		},
+		tm:"lort_tms",
+		th:"draw_switch_hover"
+	});
+})
+</script>

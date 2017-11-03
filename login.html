@@ -1,0 +1,54 @@
+	<div data-role='page' id="login" >
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 0</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role='content'>
+			<div class="login_title">
+				<span class="lgti">会员登录</span>
+				<table class="lginfo">
+					<tr>
+						<td class="lgtis">帐号: </td>
+						<td class="lginps">
+							<input type="text" id="username" name="username" data-role="none" class="lgii" autofocus/>
+						</td>
+					</tr>
+					<tr>
+						<td class="lgtis">密码: </td>
+						<td class="lginps">
+							<input type="password" id="password" name="password" data-role="none" class="lgii" />
+						</td>
+					</tr>
+				</table>
+				<div id="login_form">
+					<span class="lgntl">
+						<input type="checkbox" id="autologin" name="autologin" data-role="none" /> 
+
+					下次直接登录
+					
+					<a href="#" id="login_forget_pw" name="login_forget_pw" data-role="none" >忘记密码</a>
+					</span>
+					<span class="lgbtns">
+
+						<a data-role="none" class="lgfbt " href="register.html" ><img src="images/form/button_registration.png"/></a>
+
+						<a data-role="none" class="lgfbt " href="account.html" ><img src="images/form/button_login.png"/></a>
+					</span>
+				</div>
+			</div>
+
+		</div><!--/content -->
+		
+	</div><!--/news-->

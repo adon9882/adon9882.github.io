@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET,PUT,POST,DELETE">
+	<link rel="stylesheet" href="css/jquery/jquery.mobile.min.css"/>
+	<link rel="stylesheet" href="css/jquery/jquery-ui-1.10.4.custom.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/jgestures/jgestures.min.js"></script>
+	<script src="js/jquery/jquery.mobile.min.js"></script>
+	<script src="js/default.js"></script>
+	<script src="js/fastclick/fastclick.js"></script>
+	<script type="text/javascript" src="js/lottery_room.js"></script>
+
+	<title>浙江互联网</title>
+</head>
+<body onload="initFastButtons();window.scrollTo(0,1);"> 
+	<span id="fastclick">
+	<div data-role='page' id="lottery_room_random" >
+		<script>
+		$(function() { 
+			/*
+			可以直接從 class : lorl_redball 取得選取的號碼
+				from :　<input type="hidden" class="lorl_redball" value="選取號碼列"/>
+			*/
+			var pageId = "#lottery_room_random ";
+			var limit_reds = 1;//紅球最小值
+			var limit_redl = 35;//紅球最最大值
+			var limit_redballall = 5;//紅球取出球數
+			var limit_blues = 1;//藍球最小值
+			var limit_bluel = 12;//藍球最最大值
+			var limit_blueballall = 2;//藍球取出球數
+			var limit_redball = 18;//紅球取出球數上限制
+			var limit_blueball = 12;//藍球取出球數上限制
+			var j = 1;//注數
+			var z = 2;//每注多少元
+
+			//按x刪除DOM
+			var lorl_deleteTg = function(){
+				$( pageId+".lorl_delimg").each(function(){
+					$(this).on('click',function(){
+						$(this).parent().animate({height:0,fontSize:0,opacity:0},200,function(){
+							$(this).remove();
+						})
+					})
+				});
+				$( pageId+'.lorl_recycle').on('click',function(){
+					$( pageId+".lorl_list").text('');
+				})
+			};lorl_deleteTg();
+
+			//彙整字串，產生DOM
+			var lorl_createDOM = function(b,g,h,i,j,z){
+				var a = '<div class="lorl_col"><div class="lorl_delimg"><img src="images/b01/icon_eelete.png"  /></div><div class="lorl_listnum"><div><span class="red01 alg01">'+b+'</span><input type="hidden" class="lorl_redball" value="'+g+'"/> | <span class="blue01">'+i+'</span><input type="hidden" class="lorl_blueball" value="'+h+'"/></div><div><span class="alg01">单式投注（机选）</span><span class="lorl_detail"><span class="red01">'+z+'</span>注<span class="red01">'+j+'</span>元</span></div></div></div><!--/lorl_col-->'
+				return a;
+			};
+
+			//產生一個新的投注項目
+			var NewList = function(){
+
+				var a = $( pageId+".lorl_fastsel").val();//取得下拉選單值
+				for(var c=0; c<a; c++){
+					//red ball
+					var g = Array();
+					var g = $.fn.bitrAlgorithm(limit_reds,limit_redl,limit_redballall);
+					var ary = $.fn.strPad(g,'0',2);
+					var g = g.join(',');
+					var b = ary.join(' ');
+					//blue ball
+					var h = Array();
+					var h = $.fn.bitrAlgorithm(limit_blues,limit_bluel,limit_blueballall);
+					var bary = $.fn.strPad(h,'0',2);
+					var h = h.join(',');
+					var i = bary.join(' ');
+					k = lorl_createDOM(b,g,h,i,j,z);//彙整字串，產生DOM
+					$( pageId+".lorl_list").append(k);//插入DOM
+				};
+			}
+
+			//按下隨機或下拉選單更動時執行
+			$( pageId+".lorl_fastsel").change(function(){
+				NewList();
+				lorl_deleteTg();
+			});
+			$( pageId+".lorl_fastsel2").on('click',function(){
+				NewList();
+				lorl_deleteTg();
+			});
+			
+			//Hover Small List
+			$.fn.smallListMenu();
+
+		})
+		</script>
+		<div data-role="panel" id="astropanel" data-position="right" data-theme="b"  data-display="overlay">
+			<a href="#my-header" data-rel="close"  data-prefetch="true">Close panel</a>
+		</div><!-- /panel -->
+
+		<div data-role='header'>
+			<div class='ui-grid-b astro_head'>
+				<div class='ui-block-a astro_head_memo'>帐户余额: 0.000</div>
+				<div class='ui-block-b astro_head_memo'>红利积分: 10000</div>
+				<div class='ui-block-c '>
+					<a href="bars.html" class="button astro_bars" data-transition="pop" data-rel="dialog"  data-external-page="true">
+						<img src="images/a01/00-01.png" />
+					</a>
+				</div>
+			</div>
+		</div><!-- /header-->
+
+		<div data-role='content' style="margin-bottom:20em">
+			<div class="astro_subject">
+				<a onclick='$.fn.BHome("index.html",0);' class="astro_back A_btn" ><img src="images/a01/00-02.png"/></a>
+				<span class="title">大乐透-机选</span>
+				<a href="lottery_room_trend.html" class="astro_backR2 A_btn" rel="external" >
+					<img src="images/b01/icon_chart.png"/>
+				</a>
+				<a class="astro_backR1 A_btn" rel="external" >
+					<img src="images/b01/icon_menu.png"/>
+				</a>
+				<div class="lor_smallList">
+					<a  href="lottery_room.html" data-ajax="false" data-external-page="true" class="lor_llist">普通投注</a>
+					<a  href="lottery_room_banker.html" data-ajax="false" data-external-page="true" class="lor_llist">胆拖</a>
+					<a href="../ez/ez_room.html" data-transition="pop" class="lor_llist">参与合买</a>
+					<a href="#" class="lor_llist">玩法介绍</a>
+				</div>
+			</div><!--/astro_subject-->
+			
+			<div class="lro_subti">
+				14025期: 
+				<span class="red01">19 20 27 32 34</span> | 
+				<span class="blue01"> 06 08</span>
+			</div><!--/lro_subti-->
+			<div class="lro_fastbtn">
+				<div class="lro_le3 lorl_fastsel2 red02">&nbsp;+随机注数&nbsp;</div>
+				<select class="lro_le3 red03  lorl_fastsel" data-role="none">
+					<option value='1'>1个</option>
+					<option value='2'>2个</option>
+					<option value='3'>3个</option>
+					<option value='4'>4个</option>
+					<option value='5'>5个</option>
+					<option value='6'>6个</option>
+					<option value='7'>7个</option>
+					<option value='8'>8个</option>
+					<option value='9'>9个</option>
+					<option value='10'>10个</option>
+					<option value='11'>11个</option>
+					<option value='12'>12个</option>
+					<option value='13'>13个</option>
+					<option value='14'>14个</option>
+					<option value='15'>15个</option>
+					<option value='16'>16个</option>
+					<option value='17'>17个</option>
+					<option value='18'>18个</option>
+				</select>
+			</div><!--/lro_fastbtn-->
+			<div class="lorl_list">
+				<div class="lorl_col">
+					<div class="lorl_delimg">
+						<img src="images/b01/icon_eelete.png"  />
+					</div>
+					<div class="lorl_listnum">
+						<div>
+							<span class="red01 alg01">19 20 27 32 34</span>
+							<input type="hidden" class="lorl_redball" value="19,20,27,32,34"/>
+							 | 
+							<span class="blue01">06 08</span>
+							<input type="hidden" class="lorl_blueball" value="6,8"/>
+							
+						</div>
+						<div>
+							<span class="alg01">单式投注（机选）</span>
+							<span class="lorl_detail">
+								<span class="red01">1</span>
+								注
+								<span class="red01">2</span>
+								元
+							</span>
+						</div>
+					</div>
+				</div><!--/lorl_col-->
+			</div><!--/lorl_list-->
+		</div><!--/content -->
+		<div data-role='footer' class="lor_footer"  style="background:#e1e1e1;position: fixed;bottom: 0em;" >
+			<div class="lorl_ezto">
+				<span class="lorl_recycle"></span>
+				共18注 - 36元
+				<a href="lottery_room_list.html" data-role='none' data-ajax="false"  data-rel="external" data-role='none' data-role='none' >
+					<span class="lor_next"></span>
+				</a>
+			</div>
+		</div><!--/footer-->
+	</div><!--/lottery_room_random-->
+	</span> <!-- end fastclick -->
+</body>
+</html>
