@@ -23,17 +23,17 @@ $(window).load(function() {
 	var old_v = 145;
 	$.support.cors = true;
 	$.mobile.allowCrossDomainPages = true;;
-	var data = $.getJSON('http://www.astrocorp.com.tw/api.php');
-    data.success(function( msg ) {
-        if(msg[0]['version']!=old_v){
-			if(confirm("侦测到新版本，是否更新？")){
-			  window.plugins.ChildBrowser.openExternal('https://build.phonegap.com/apps/852938/install/?qr_key=FzYq5r4GBiJbBeKEMXL3');
-			}
-			else{
-			  return;
-			}
-        }
-    });
+	// var data = $.getJSON('http://www.astrocorp.com.tw/api.php');
+ //    data.success(function( msg ) {
+ //        if(msg[0]['version']!=old_v){
+	// 		if(confirm("侦测到新版本，是否更新？")){
+	//    }
+ //      else{
+ //    		  window.plugins.ChildBrowser.openExternal('https://build.phonegap.com/apps/852938/install/?qr_key=FzYq5r4GBiJbBeKEMXL3');
+	// 	  return;
+	// 		}
+ //        }
+ //    });
 
 });
 
