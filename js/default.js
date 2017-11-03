@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 
 $(".links").each(function(){
 	$(this).on( "click", function(event) {
-		// event.preventDefault()
+		event.preventDefault()
 	    window.location.href = $(this).attr('href');
 	 });
 })
