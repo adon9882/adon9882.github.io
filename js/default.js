@@ -12,6 +12,14 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+
+$(".links").each(function(){
+	$(this).on( "click", function(event) {
+		// event.preventDefault()
+	    window.location.href = $(this).attr('href');
+	 });
+})
+
 	$(document).bind('mobileinit',function(){
 	    $.mobile.loadingMessage = "载入页面ing..";
 	    $.mobile.pageLoadErrorMessage = "载入错误页面";
